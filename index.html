@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 숭실대학교 전기공학부 신임교수 채용 — 지원자 비교 검토</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/[email protected]/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F5F1E8;
+  --paper-2:#EDE7D9;
+  --ink:#1A1814;
+  --ink-soft:#3D3A33;
+  --ink-mute:#76716A;
+  --line:#D9D2C0;
+  --line-soft:#E8E2D1;
+  --accent:#A8341F;     /* 빨강 - 경고/액센트 */
+  --accent-deep:#7A2516;
+  --navy:#1E3A5F;
+  --gold:#B8893F;
+  --green:#3F6B47;
+  --plum:#4F2D5C;
+  --rust:#9A4A1F;
+  --teal:#1E5560;
+  /* 분야별 색상 */
+  --f-power:#1E3A5F;       /* 전력/스마트그리드 */
+  --f-magnetic:#9A4A1F;    /* 전자기/초전도 */
+  --f-organic:#3F6B47;     /* 유기광전자 */
+  --f-molecular:#4F2D5C;   /* 분자전자 */
+  --f-energy:#B8893F;      /* 에너지하베스팅 */
+  --f-biosensor:#A8341F;   /* 바이오센서 */
+  /* 논문 등급별 색상 */
+  --q1:#1A4D2E;
+  --q1-bg:#E1ECDF;
+  --q2:#6B8E5A;
+  --q2-bg:#EEF1E8;
+  --q3:#B8893F;
+  --q3-bg:#F5EDDC;
+  --scopus:#856A5C;
+  --scopus-bg:#EFE9E1;
+  --top-tier:#0D0D0D;
+  /* 학력 적합도 색상 (전기공학부 적합성) */
+  --fit-direct:#1A4D2E;
+  --fit-direct-bg:#E1ECDF;
+  --fit-adjacent:#B8893F;
+  --fit-adjacent-bg:#F5EDDC;
+  --fit-convergent:#856A5C;
+  --fit-convergent-bg:#EFE9E1;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.55;
+  font-feature-settings:"ss01","cv11";
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(168,52,31,0.025) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(30,58,95,0.02) 0%, transparent 40%);
+  min-height:100vh;
+}
+
+/* ========== 경고 배너 ========== */
+.warning-banner{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 20px;
+  text-align:center;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  box-shadow:0 2px 12px rgba(168,52,31,0.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.warning-banner::before{
+  content:"⚠";
+  font-size:16px;
+}
+.warning-banner strong{
+  background:rgba(255,255,255,0.2);
+  padding:2px 8px;
+  border-radius:3px;
+  letter-spacing:0.02em;
+}
+
+/* ========== 헤더 ========== */
+.page-header{
+  max-width:1400px;
+  margin:0 auto;
+  padding:48px 32px 24px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--ink-mute);
+  margin-bottom:12px;
+}
+.eyebrow .dot{
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:var(--accent);
+  border-radius:50%;
+  margin:0 8px 1px;
+  vertical-align:middle;
+}
+.page-title{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:500;
+  font-size:clamp(28px,4.5vw,52px);
+  line-height:1.05;
+  letter-spacing:-0.025em;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+.page-title em{
+  font-style:italic;
+  font-weight:400;
+  color:var(--accent-deep);
+}
+.page-sub{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:18px;
+  color:var(--ink-mute);
+  font-weight:400;
+}
+.header-meta{
+  display:flex;
+  gap:32px;
+  margin-top:24px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:var(--ink-soft);
+  font-family:'JetBrains Mono',monospace;
+}
+.header-meta div{display:flex;gap:8px;align-items:baseline}
+.header-meta .label{color:var(--ink-mute);font-size:11px;text-transform:uppercase;letter-spacing:0.1em}
+
+/* ========== 통계 대시보드 ========== */
+.stats-row{
+  max-width:1400px;
+  margin:32px auto 0;
+  padding:0 32px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.stat-cell{
+  background:var(--paper);
+  padding:20px 24px;
+}
+.stat-num{
+  font-family:'Fraunces',serif;
+  font-size:36px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+}
+.stat-label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--ink-mute);
+  margin-top:6px;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ========== 컨트롤 바 ========== */
+.controls{
+  max-width:1400px;
+  margin:32px auto 0;
+  padding:0 32px;
+}
+.controls-inner{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:18px 22px;
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.control-group{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.control-label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  font-weight:500;
+}
+.sort-buttons{
+  display:flex;
+  gap:0;
+  border:1px solid var(--line);
+}
+.sort-btn{
+  background:transparent;
+  border:none;
+  padding:7px 12px;
+  font-family:'Pretendard',sans-serif;
+  font-size:12.5px;
+  cursor:pointer;
+  color:var(--ink-soft);
+  border-right:1px solid var(--line);
+  transition:all 0.15s;
+  font-weight:500;
+}
+.sort-btn:last-child{border-right:none}
+.sort-btn:hover{background:var(--paper-2)}
+.sort-btn.active{
+  background:var(--ink);
+  color:var(--paper);
+}
+.sort-btn .arrow{font-size:9px;margin-left:3px;opacity:0.6}
+
+.field-toggles{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.field-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 11px;
+  border:1px solid var(--line);
+  background:transparent;
+  cursor:pointer;
+  font-size:12px;
+  color:var(--ink-soft);
+  font-weight:500;
+  transition:all 0.15s;
+  font-family:inherit;
+}
+.field-toggle:hover{background:var(--paper-2)}
+.field-toggle.active{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+.field-toggle .swatch{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--field-color);
+}
+.field-toggle.active .swatch{
+  box-shadow:0 0 0 2px var(--paper);
+}
+
+/* 분야 드롭다운 토글 */
+.field-dropdown{
+  position:relative;
+}
+.field-dropdown-trigger{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:12.5px;
+  font-weight:500;
+  color:var(--ink);
+  transition:all 0.15s;
+  white-space:nowrap;
+  letter-spacing:-0.005em;
+}
+.field-dropdown-trigger:hover{
+  background:var(--paper-2);
+}
+.field-dropdown.open .field-dropdown-trigger,
+.field-dropdown-trigger.partial{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+.field-dropdown-trigger .field-count{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;
+  background:var(--paper-2);
+  color:var(--ink);
+  padding:1px 6px;
+  letter-spacing:0.02em;
+  font-weight:600;
+}
+.field-dropdown.open .field-dropdown-trigger .field-count,
+.field-dropdown-trigger.partial .field-count{
+  background:rgba(255,255,255,0.2);
+  color:var(--paper);
+}
+.field-dropdown-trigger .caret{
+  font-size:9px;
+  transition:transform 0.25s;
+  opacity:0.6;
+  display:inline-block;
+}
+.field-dropdown.open .field-dropdown-trigger .caret{
+  transform:rotate(180deg);
+}
+.field-dropdown-trigger .swatch-row{
+  display:inline-flex;
+  gap:2px;
+  margin-left:2px;
+}
+.field-dropdown-trigger .swatch-row .mini-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--c);
+  display:inline-block;
+}
+.field-dropdown-panel{
+  position:absolute;
+  top:calc(100% + 6px);
+  left:0;
+  background:#fff;
+  border:1px solid var(--ink);
+  padding:14px;
+  display:none;
+  z-index:50;
+  box-shadow:0 12px 40px -10px rgba(26,24,20,0.2);
+  min-width:280px;
+}
+.field-dropdown.open .field-dropdown-panel{
+  display:block;
+  animation:dropdownIn 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes dropdownIn{
+  from{opacity:0;transform:translateY(-4px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.field-dropdown-panel-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--line-soft);
+}
+.field-dropdown-panel-header > span{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+}
+.field-dropdown-panel-actions{
+  display:flex;
+  gap:10px;
+}
+.field-dropdown-panel-action{
+  font-size:10.5px;
+  color:var(--accent);
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:0;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.field-dropdown-panel-action:hover{
+  text-decoration:underline;
+}
+.field-dropdown-panel .field-toggles{
+  flex-direction:column;
+  gap:4px;
+}
+.field-dropdown-panel .field-toggle{
+  width:100%;
+  justify-content:flex-start;
+  padding:7px 10px;
+}
+
+.search-box{
+  flex:1;
+  min-width:180px;
+  border:1px solid var(--line);
+  background:transparent;
+  padding:8px 12px;
+  font-family:inherit;
+  font-size:13px;
+  color:var(--ink);
+  outline:none;
+  transition:border-color 0.15s;
+}
+.search-box:focus{border-color:var(--ink)}
+
+.expand-all-btn{
+  background:transparent;
+  border:1px solid var(--ink);
+  padding:7px 14px;
+  font-family:inherit;
+  font-size:12px;
+  font-weight:500;
+  cursor:pointer;
+  color:var(--ink);
+  transition:all 0.15s;
+  letter-spacing:0.02em;
+}
+.expand-all-btn:hover{background:var(--ink);color:var(--paper)}
+
+/* ========== 지원자 카드 리스트 ========== */
+.candidates-list{
+  max-width:1400px;
+  margin:24px auto 80px;
+  padding:0 32px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.candidate-card{
+  background:#fff;
+  border:1px solid var(--line);
+  position:relative;
+  transition:border-color 0.2s,box-shadow 0.2s;
+  overflow:hidden;
+}
+.candidate-card:hover{
+  border-color:var(--ink-soft);
+  box-shadow:0 4px 24px -8px rgba(26,24,20,0.08);
+}
+.candidate-card.expanded{
+  border-color:var(--ink);
+  box-shadow:0 8px 36px -12px rgba(26,24,20,0.15);
+}
+.candidate-card.hidden{display:none}
+
+.card-field-bar{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:var(--field-color);
+}
+
+.card-header{
+  display:grid;
+  grid-template-columns:60px 1fr auto;
+  gap:20px;
+  padding:18px 22px 18px 28px;
+  cursor:pointer;
+  align-items:center;
+}
+
+.avatar{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Fraunces',serif;
+  font-weight:500;
+  font-size:22px;
+  color:var(--ink-soft);
+  flex-shrink:0;
+}
+
+.card-main{
+  display:grid;
+  grid-template-columns:1.2fr 1.5fr 1fr;
+  gap:20px;
+  align-items:center;
+}
+
+.identity .name{
+  font-family:'Fraunces',serif;
+  font-weight:500;
+  font-size:22px;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+  line-height:1.1;
+}
+.identity .name-en{
+  font-size:12px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  margin-top:3px;
+  letter-spacing:0.02em;
+}
+.identity .meta-row{
+  display:flex;
+  gap:10px;
+  margin-top:6px;
+  font-size:11.5px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+}
+.identity .meta-row span{position:relative}
+.identity .meta-row span:not(:last-child)::after{
+  content:"·";
+  margin-left:10px;
+  color:var(--line);
+}
+
+.field-info .field-tag{
+  display:inline-block;
+  padding:3px 9px;
+  background:var(--field-color);
+  color:#fff;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace;
+  border-radius:2px;
+}
+.field-info .field-detail{
+  font-size:13px;
+  color:var(--ink-soft);
+  margin-top:6px;
+  font-style:italic;
+  font-family:'Fraunces',serif;
+  line-height:1.3;
+}
+.keyword-row{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  margin-top:7px;
+}
+.keyword{
+  font-size:10.5px;
+  padding:1px 6px;
+  background:var(--paper);
+  color:var(--ink-mute);
+  border:1px solid var(--line-soft);
+  font-family:'JetBrains Mono',monospace;
+}
+
+.metrics-mini{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  text-align:center;
+}
+.mini-metric .num{
+  font-family:'Fraunces',serif;
+  font-size:23px;
+  font-weight:500;
+  color:var(--ink);
+  line-height:1;
+  letter-spacing:-0.02em;
+}
+.mini-metric .lbl{
+  font-size:9.5px;
+  color:var(--ink-mute);
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-family:'JetBrains Mono',monospace;
+  margin-top:4px;
+}
+.mini-metric.highlight .num{
+  color:var(--q1);
+  font-weight:600;
+}
+.mini-metric.highlight .lbl{
+  color:var(--q1);
+  font-weight:700;
+}
+
+.expand-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:var(--paper);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform 0.3s,background 0.2s;
+  font-size:16px;
+  color:var(--ink-soft);
+  flex-shrink:0;
+}
+.candidate-card.expanded .expand-icon{
+  transform:rotate(180deg);
+  background:var(--ink);
+  color:var(--paper);
+}
+
+/* ========== 아코디언 디테일 ========== */
+.card-detail{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  border-top:1px solid transparent;
+}
+.candidate-card.expanded .card-detail{
+  max-height:5000px;
+  border-top-color:var(--line);
+}
+.detail-inner{
+  padding:24px 28px 30px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:32px;
+}
+
+.section-title{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.16em;
+  color:var(--field-color);
+  margin-bottom:12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line-soft);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section-title::before{
+  content:"";
+  display:inline-block;
+  width:5px;
+  height:5px;
+  background:var(--field-color);
+  border-radius:50%;
+}
+
+.detail-section{margin-bottom:24px}
+.detail-section:last-child{margin-bottom:0}
+
+/* 학력 테이블 */
+.edu-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+.edu-table th{
+  text-align:left;
+  padding:6px 8px 6px 0;
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--ink-mute);
+  font-weight:500;
+  border-bottom:1px solid var(--line-soft);
+  font-family:'JetBrains Mono',monospace;
+  white-space:nowrap;
+}
+.edu-table td{
+  padding:9px 8px 9px 0;
+  border-bottom:1px solid var(--line-soft);
+  vertical-align:top;
+}
+.edu-table tr:last-child td{border-bottom:none}
+.edu-table .deg{
+  font-weight:600;
+  color:var(--ink);
+  font-family:'Fraunces',serif;
+  font-size:13px;
+}
+.edu-table .univ{font-weight:500;color:var(--ink)}
+.edu-table .thesis{
+  font-style:italic;
+  font-size:12px;
+  color:var(--ink-mute);
+  margin-top:2px;
+  display:block;
+  font-family:'Fraunces',serif;
+  line-height:1.35;
+}
+.gpa-display{
+  display:inline-flex;
+  align-items:baseline;
+  gap:3px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  font-size:12px;
+}
+.gpa-display .scale{color:var(--ink-mute);font-weight:400;font-size:10.5px}
+
+/* 경력 타임라인 */
+.career-timeline{
+  position:relative;
+  padding-left:18px;
+}
+.career-timeline::before{
+  content:"";
+  position:absolute;
+  left:4px;
+  top:6px;
+  bottom:6px;
+  width:1px;
+  background:var(--line);
+}
+.career-item{
+  position:relative;
+  padding:6px 0 12px;
+}
+.career-item::before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:9px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--field-color);
+}
+.career-item.current::before{
+  background:var(--field-color);
+}
+.career-period{
+  font-size:11px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+}
+.career-role{
+  font-weight:600;
+  font-size:13.5px;
+  color:var(--ink);
+  margin-top:1px;
+}
+.career-desc{
+  font-size:12.5px;
+  color:var(--ink-soft);
+  margin-top:2px;
+  line-height:1.45;
+}
+
+/* ===== 학력 적합도 (전기공학부) ===== */
+.fit-mark{
+  display:inline-block;
+  font-size:9px;
+  font-weight:700;
+  padding:2px 6px;
+  letter-spacing:0.06em;
+  font-family:'JetBrains Mono',monospace;
+  line-height:1.3;
+}
+.fit-direct{background:var(--fit-direct);color:#fff}
+.fit-adjacent{background:var(--fit-adjacent);color:#fff}
+.fit-convergent{background:var(--fit-convergent);color:#fff}
+
+.inferred-mark{
+  font-size:9px;
+  background:var(--paper-2);
+  color:var(--ink-mute);
+  padding:1px 4px;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.04em;
+  font-weight:600;
+  margin-left:3px;
+  border:1px dashed var(--line);
+}
+
+/* 카드 펼침 학력 테이블 dept/fit 표시 */
+.dept-line{
+  font-size:12px;
+  color:var(--ink);
+  margin-top:3px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+  line-height:1.35;
+}
+.dept-line .dept-text{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+
+/* 학력 적합도 매트릭스 섹션 */
+.edu-fit-section{
+  max-width:1400px;
+  margin:60px auto 0;
+  padding:0 32px;
+}
+.fit-legend{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:11.5px;
+  color:var(--ink-soft);
+  margin-bottom:18px;
+  padding:10px 16px;
+  background:var(--paper-2);
+  border:1px solid var(--line-soft);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.01em;
+}
+.fit-legend .legend-title{
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:0.12em;
+  color:var(--ink);
+  padding-right:10px;
+  border-right:1px solid var(--line);
+}
+.fit-legend > span{display:inline-flex;align-items:center;gap:6px}
+
+.edu-fit-table-wrapper{
+  overflow-x:auto;
+  border:1px solid var(--line);
+}
+.edu-fit-table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  font-size:12.5px;
+  min-width:780px;
+}
+.edu-fit-table thead th{
+  background:var(--paper);
+  text-align:left;
+  padding:14px 14px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-weight:700;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  border-bottom:2px solid var(--line);
+  white-space:nowrap;
+}
+.edu-fit-table thead th:not(:first-child):not(:last-child){
+  text-align:center;
+}
+.edu-fit-table thead th:last-child{text-align:center}
+.edu-fit-table tbody tr{
+  border-bottom:1px solid var(--line-soft);
+}
+.edu-fit-table tbody tr:last-child{border-bottom:none}
+.edu-fit-table td{
+  padding:14px;
+  vertical-align:top;
+  border-right:1px solid var(--line-soft);
+}
+.edu-fit-table td:last-child{border-right:none}
+.fit-name-cell{
+  width:140px;
+  background:var(--paper);
+}
+.fit-name-cell strong{
+  font-family:'Fraunces',serif;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:-0.015em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.fit-name-dot{
+  display:inline-block;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.fit-name-id{
+  font-size:10.5px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  margin-top:3px;
+  letter-spacing:0.02em;
+}
+.fit-edu-cell{
+  position:relative;
+  min-height:80px;
+}
+.fit-edu-cell.fit-cell-direct{background:var(--fit-direct-bg)}
+.fit-edu-cell.fit-cell-adjacent{background:var(--fit-adjacent-bg)}
+.fit-edu-cell.fit-cell-convergent{background:var(--fit-convergent-bg)}
+.fit-edu-univ{
+  font-size:11.5px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.01em;
+  margin-bottom:4px;
+}
+.fit-edu-dept{
+  font-size:13px;
+  font-weight:600;
+  color:var(--ink);
+  font-family:'Fraunces',serif;
+  letter-spacing:-0.01em;
+  line-height:1.3;
+  margin-bottom:8px;
+}
+.fit-edu-cell .fit-mark{
+  position:absolute;
+  bottom:10px;
+  left:14px;
+}
+.empty-cell{
+  text-align:center;
+  color:var(--ink-mute);
+  font-size:18px;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+}
+.fit-overall{
+  text-align:center;
+  vertical-align:middle !important;
+  width:110px;
+}
+.fit-overall .fit-mark{
+  font-size:11px;
+  padding:5px 10px;
+  letter-spacing:0.08em;
+}
+
+/* 적합도 요약 통계 */
+.fit-stats-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-top:20px;
+}
+.fit-stat-cell{
+  background:#fff;
+  padding:14px 18px;
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+.fit-stat-cell .fit-stat-num{
+  font-family:'Fraunces',serif;
+  font-size:36px;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  line-height:1;
+}
+.fit-stat-cell.direct .fit-stat-num{color:var(--fit-direct)}
+.fit-stat-cell.adjacent .fit-stat-num{color:var(--fit-adjacent)}
+.fit-stat-cell.convergent .fit-stat-num{color:var(--fit-convergent)}
+.fit-stat-cell .fit-stat-info{flex:1}
+.fit-stat-cell .fit-stat-label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  color:var(--ink);
+}
+.fit-stat-cell .fit-stat-names{
+  font-size:11.5px;
+  color:var(--ink-mute);
+  font-family:'Fraunces',serif;
+  margin-top:2px;
+  font-style:italic;
+}
+
+@media (max-width:1100px){
+  .fit-stats-row{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .edu-fit-section{padding:0 18px}
+  .edu-fit-table{min-width:680px;font-size:11.5px}
+  .edu-fit-table td{padding:10px 8px}
+  .fit-name-cell{width:100px}
+  .fit-name-cell strong{font-size:13.5px}
+  .fit-edu-univ{font-size:10.5px}
+  .fit-edu-dept{font-size:11.5px}
+  .fit-stat-cell .fit-stat-num{font-size:28px}
+  .fit-legend{font-size:10.5px;gap:10px;padding:8px 12px}
+}
+.tier-badge{
+  display:inline-block;
+  font-size:9px;
+  font-weight:700;
+  padding:2px 5px;
+  letter-spacing:0.06em;
+  font-family:'JetBrains Mono',monospace;
+  margin-left:6px;
+  vertical-align:middle;
+  line-height:1;
+}
+.tier-Q1{background:var(--q1);color:#fff}
+.tier-Q2{background:var(--q2);color:#fff}
+.tier-Q3{background:var(--q3);color:#fff}
+.tier-Scopus{background:var(--scopus);color:#fff}
+.tier-Top{
+  background:var(--top-tier);
+  color:#fff;
+  position:relative;
+}
+.tier-Top::before{
+  content:"★";
+  margin-right:3px;
+  color:#FFD86B;
+}
+
+.quality-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+  margin-bottom:14px;
+}
+.quality-cell{
+  background:#fff;
+  padding:11px 8px;
+  text-align:center;
+  position:relative;
+}
+.quality-cell .n{
+  font-family:'Fraunces',serif;
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  line-height:1;
+}
+.quality-cell .l{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  margin-top:5px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+}
+.quality-cell.q1{background:var(--q1-bg)}
+.quality-cell.q1 .n{color:var(--q1)}
+.quality-cell.q2{background:var(--q2-bg)}
+.quality-cell.q2 .n{color:var(--q2)}
+.quality-cell.q3{background:var(--q3-bg)}
+.quality-cell.q3 .n{color:var(--q3)}
+.quality-cell.scopus{background:var(--scopus-bg)}
+.quality-cell.scopus .n{color:var(--scopus)}
+.quality-cell.first{background:#fff}
+.quality-cell.first .n{color:var(--field-color)}
+.quality-cell.zero .n{opacity:0.25}
+
+/* 적층 막대 (논문 분포 시각화) */
+.quality-bar{
+  display:flex;
+  height:8px;
+  margin:6px 0 12px;
+  background:var(--paper-2);
+  overflow:hidden;
+  border:1px solid var(--line-soft);
+}
+.quality-bar > div{
+  height:100%;
+  transition:width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.quality-bar .seg-q1{background:var(--q1)}
+.quality-bar .seg-q2{background:var(--q2)}
+.quality-bar .seg-q3{background:var(--q3)}
+.quality-bar .seg-scopus{background:var(--scopus)}
+
+.top-journals{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:8px;
+}
+.journal-pill{
+  font-size:11.5px;
+  padding:3px 8px;
+  background:var(--paper-2);
+  color:var(--ink-soft);
+  border:1px solid var(--line-soft);
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+}
+.journal-pill .tier-badge{
+  font-style:normal;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* 수상 / 특허 */
+.list-items{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.list-items li{
+  font-size:12.5px;
+  color:var(--ink-soft);
+  padding:4px 0 4px 14px;
+  position:relative;
+  line-height:1.4;
+}
+.list-items li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--field-color);
+  font-weight:600;
+}
+
+/* 평가 인사이트 박스 */
+.insight-box{
+  background:var(--paper);
+  border:1px solid var(--line-soft);
+  border-left:3px solid var(--field-color);
+  padding:14px 16px;
+  margin-top:12px;
+}
+.insight-box .insight-label{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--field-color);
+  font-weight:700;
+  margin-bottom:6px;
+  font-family:'JetBrains Mono',monospace;
+}
+.insight-box .insight-text{
+  font-size:13px;
+  color:var(--ink);
+  line-height:1.5;
+  font-family:'Fraunces',serif;
+}
+
+/* 비교 차트 섹션 */
+.comparison-section{
+  max-width:1400px;
+  margin:60px auto 40px;
+  padding:0 32px;
+}
+.comp-title{
+  font-family:'Fraunces',serif;
+  font-size:24px;
+  font-weight:500;
+  letter-spacing:-0.02em;
+  margin-bottom:6px;
+}
+.comp-title em{font-style:italic;color:var(--accent-deep)}
+.comp-sub{
+  color:var(--ink-mute);
+  font-size:13px;
+  margin-bottom:24px;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+}
+.chart-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.chart-card{
+  background:#fff;
+  padding:22px 24px;
+}
+.chart-card h4{
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:16px;
+  font-family:'Fraunces',serif;
+  color:var(--ink);
+}
+.bar-row{
+  display:grid;
+  grid-template-columns:140px 1fr 50px;
+  gap:10px;
+  align-items:center;
+  padding:6px 0;
+  font-size:12.5px;
+}
+.bar-row .barname{
+  color:var(--ink-soft);
+  font-weight:500;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.bar-track{
+  height:14px;
+  background:var(--paper-2);
+  position:relative;
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%;
+  background:var(--field-color);
+  transition:width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.bar-row .barval{
+  text-align:right;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;
+  color:var(--ink);
+  font-weight:600;
+}
+
+/* ===== 연구 논문 정량분석 섹션 ===== */
+.quant-analysis-section{
+  max-width:1400px;
+  margin:60px auto 40px;
+  padding:0 32px;
+}
+.quant-warning{
+  display:inline-block;
+  background:rgba(168,52,31,0.08);
+  border-left:3px solid var(--accent);
+  padding:8px 14px;
+  font-size:12px;
+  color:var(--accent-deep);
+  font-weight:600;
+  margin:8px 0 18px;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.01em;
+}
+.quant-controls{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:18px 22px;
+  margin-bottom:18px;
+}
+.quant-toggle-group{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.quant-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid var(--line);
+  background:transparent;
+  cursor:pointer;
+  transition:all 0.15s;
+  user-select:none;
+  position:relative;
+}
+.quant-toggle:hover{background:var(--paper-2)}
+.quant-toggle input{
+  appearance:none;
+  -webkit-appearance:none;
+  width:14px;
+  height:14px;
+  border:1.5px solid var(--ink-mute);
+  background:#fff;
+  cursor:pointer;
+  position:relative;
+  flex-shrink:0;
+}
+.quant-toggle input:checked{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+.quant-toggle input:checked::after{
+  content:"✓";
+  position:absolute;
+  color:#fff;
+  font-size:10px;
+  top:-2px;
+  left:1.5px;
+  font-weight:bold;
+}
+.quant-toggle input:checked ~ .quant-toggle-label{
+  color:var(--accent-deep);
+  font-weight:700;
+}
+.quant-toggle:has(input:checked){
+  background:rgba(168,52,31,0.05);
+  border-color:var(--accent);
+}
+.quant-toggle-label{
+  font-size:13px;
+  font-weight:500;
+  color:var(--ink);
+  letter-spacing:-0.005em;
+}
+.quant-toggle-hint{
+  font-size:10px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+  margin-left:2px;
+}
+
+.quant-summary-cards{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-bottom:18px;
+}
+.qsum-card{
+  background:#fff;
+  padding:14px 12px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.qsum-card .qsum-bar{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:var(--field-color);
+}
+.qsum-card .qsum-name{
+  font-family:'Fraunces',serif;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  margin-bottom:4px;
+}
+.qsum-card .qsum-num{
+  font-family:'Fraunces',serif;
+  font-size:28px;
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:-0.02em;
+  line-height:1;
+}
+.qsum-card .qsum-num.score{color:var(--q1)}
+.qsum-card .qsum-label{
+  font-size:9px;
+  color:var(--ink-mute);
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin-top:4px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+}
+.qsum-card .qsum-delta{
+  font-size:10px;
+  font-family:'JetBrains Mono',monospace;
+  margin-top:3px;
+  font-weight:600;
+}
+.qsum-card .qsum-delta.minus{color:var(--accent)}
+.qsum-card .qsum-delta.same{color:var(--ink-mute)}
+
+.weight-legend{
+  font-size:10.5px;
+  color:var(--ink-mute);
+  margin-top:10px;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+  padding:6px 10px;
+  background:var(--paper);
+  border:1px solid var(--line-soft);
+}
+
+/* OA 도넛 차트 */
+.oa-mini{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.oa-mini:last-child{border-bottom:none}
+.oa-mini .oa-name{
+  flex:0 0 120px;
+  font-size:12.5px;
+  font-weight:500;
+}
+.oa-mini .oa-bar{
+  flex:1;
+  height:18px;
+  display:flex;
+  background:var(--paper-2);
+  position:relative;
+  overflow:hidden;
+}
+.oa-mini .oa-seg{
+  height:100%;
+}
+.oa-seg.subscription{background:var(--ink)}
+.oa-seg.premium-oa{background:#7A4C9F}
+.oa-seg.standard-oa{background:#5B8DBE}
+.oa-seg.volume-oa{background:var(--accent)}
+.oa-mini .oa-pct{
+  flex:0 0 70px;
+  text-align:right;
+  font-size:11px;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--ink-mute);
+  font-weight:500;
+}
+.oa-legend{
+  display:flex;
+  gap:14px;
+  font-size:10.5px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--ink-mute);
+}
+.oa-legend span span{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  vertical-align:middle;
+  margin-right:4px;
+}
+
+/* 저자별 논문 표 */
+.pub-table-section{
+  margin-top:36px;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:24px 26px;
+}
+.pub-table-controls{
+  display:flex;
+  gap:10px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.pub-table-controls select{
+  padding:7px 11px;
+  border:1px solid var(--line);
+  background:#fff;
+  font-family:inherit;
+  font-size:12.5px;
+  color:var(--ink);
+  cursor:pointer;
+  font-weight:500;
+}
+.pub-table-controls select:focus{outline:none;border-color:var(--ink)}
+.pub-count{
+  margin-left:auto;
+  font-size:11px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.05em;
+}
+
+.pub-table-wrapper{
+  overflow-x:auto;
+  border-top:1px solid var(--line-soft);
+}
+.pub-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12.5px;
+}
+.pub-table thead th{
+  text-align:left;
+  padding:10px 8px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-weight:700;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  border-bottom:2px solid var(--line);
+  background:var(--paper);
+  cursor:pointer;
+  user-select:none;
+  white-space:nowrap;
+  position:sticky;
+  top:0;
+}
+.pub-table thead th:hover{background:var(--paper-2);color:var(--ink)}
+.pub-table thead th .sort-ind{
+  margin-left:3px;
+  opacity:0.4;
+  font-size:9px;
+}
+.pub-table thead th.sorted .sort-ind{opacity:1;color:var(--accent)}
+.pub-table tbody tr{
+  border-bottom:1px solid var(--line-soft);
+  transition:background 0.1s;
+}
+.pub-table tbody tr:hover{background:var(--paper)}
+.pub-table tbody tr.oa-volume{background:rgba(168,52,31,0.04)}
+.pub-table tbody tr.oa-volume:hover{background:rgba(168,52,31,0.08)}
+.pub-table td{
+  padding:9px 8px;
+  vertical-align:middle;
+}
+.pub-table .col-author{
+  font-weight:600;
+  font-family:'Fraunces',serif;
+  font-size:13.5px;
+  white-space:nowrap;
+}
+.pub-table .col-author .field-dot{
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  margin-right:6px;
+  vertical-align:middle;
+}
+.pub-table .col-journal{
+  font-style:italic;
+  font-family:'Fraunces',serif;
+  color:var(--ink-soft);
+}
+.pub-table .col-year{
+  font-family:'JetBrains Mono',monospace;
+  color:var(--ink-mute);
+  font-size:11.5px;
+}
+.pub-table .col-tier{text-align:center}
+.pub-table .col-oa{text-align:center;white-space:nowrap}
+.pub-table .col-fa{text-align:center}
+.fa-mark{
+  display:inline-block;
+  width:18px;
+  height:18px;
+  background:var(--q1);
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  text-align:center;
+  line-height:18px;
+  border-radius:2px;
+  font-family:'JetBrains Mono',monospace;
+}
+.fa-empty{color:var(--line);font-size:14px}
+.oa-flag{
+  display:inline-block;
+  font-size:9.5px;
+  font-weight:700;
+  padding:2px 6px;
+  letter-spacing:0.05em;
+  font-family:'JetBrains Mono',monospace;
+}
+.oa-V{background:var(--accent);color:#fff}
+.oa-P{background:#7A4C9F;color:#fff}
+.oa-S{background:#5B8DBE;color:#fff}
+.oa-none{color:var(--ink-mute);font-size:11px}
+
+@media (max-width:1100px){
+  .quant-summary-cards{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:768px){
+  .quant-analysis-section{padding:0 18px}
+  .quant-summary-cards{grid-template-columns:repeat(2,1fr)}
+  .qsum-card .qsum-num{font-size:22px}
+  .qsum-card .qsum-name{font-size:12px}
+  .pub-table-section{padding:16px 14px}
+  .pub-table thead th{font-size:9px;padding:8px 5px}
+  .pub-table td{padding:7px 5px;font-size:11.5px}
+  .oa-mini .oa-name{flex:0 0 80px;font-size:11px}
+  .oa-mini .oa-pct{flex:0 0 56px;font-size:10px}
+  .pub-table-controls{gap:6px}
+  .pub-table-controls select{font-size:11.5px;padding:5px 8px}
+}
+  max-width:1400px;
+  margin:40px auto;
+  padding:24px 32px;
+  border-top:1px solid var(--line);
+  font-size:11.5px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+/* ========== 반응형 ========== */
+@media (max-width:1100px){
+  .card-main{
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .card-main .field-info{grid-column:1/-1;order:3}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .detail-inner{grid-template-columns:1fr}
+  .chart-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:768px){
+  body{font-size:14px}
+  .page-header{padding:32px 18px 18px}
+  .page-title{font-size:30px}
+  .page-sub{font-size:15px}
+  .header-meta{gap:18px;font-size:11.5px}
+  .stats-row{margin-top:24px;padding:0 18px}
+  .stat-num{font-size:26px}
+  .stat-cell{padding:14px 16px}
+  .controls,.candidates-list,.comparison-section{padding-left:18px;padding-right:18px}
+  .controls-inner{padding:14px;gap:14px}
+  .control-group{flex-wrap:wrap}
+  .card-header{
+    grid-template-columns:48px 1fr 28px;
+    gap:14px;
+    padding:14px 16px 14px 22px;
+  }
+  .card-field-bar{width:4px}
+  .avatar{width:46px;height:46px;font-size:18px}
+  .card-main{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .identity .name{font-size:18px}
+  .metrics-mini{grid-template-columns:repeat(4,1fr);gap:8px}
+  .mini-metric .num{font-size:19px}
+  .mini-metric .lbl{font-size:8.5px}
+  .detail-inner{padding:18px 20px 22px;gap:22px}
+  .quality-cell{padding:8px 4px}
+  .quality-cell .n{font-size:18px}
+  .quality-cell .l{font-size:8px;letter-spacing:0.04em}
+  .bar-row{grid-template-columns:90px 1fr 42px;font-size:11.5px}
+  .bar-row .barname{font-size:11.5px}
+  .footer{flex-direction:column;padding:18px}
+}
+
+@media (max-width:480px){
+  .warning-banner{font-size:11px;padding:8px 12px;gap:6px}
+  .warning-banner strong{font-size:10.5px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .header-meta{flex-direction:column;gap:6px}
+  .card-header{padding:12px 14px 12px 18px}
+  .field-toggles{gap:4px}
+  .field-toggle{font-size:11px;padding:5px 9px}
+  .sort-buttons{flex-wrap:wrap}
+}
+
+/* 인쇄용 */
+@media print{
+  .warning-banner{position:static}
+  .controls{display:none}
+  .candidate-card{break-inside:avoid;border:1px solid #000 !important}
+  .card-detail{max-height:none !important;border-top:1px solid #ccc !important}
+  body{background:#fff}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 경고 배너 -->
+<div class="warning-banner">
+  <strong>CONFIDENTIAL</strong>
+  <span>본 문서는 개인정보를 포함하고 있어 외부 공유 및 유출을 엄격히 금지합니다 — 임용 심사 외 목적으로 사용 불가</span>
+</div>
+
+<!-- 헤더 -->
+<header class="page-header">
+  <div class="eyebrow">SOONGSIL UNIV. <span class="dot"></span> ELECTRICAL ENGINEERING <span class="dot"></span> 2026 FACULTY SEARCH</div>
+  <h1 class="page-title">신임교수 채용 <em>지원자 비교 검토</em></h1>
+  <div class="page-sub">Comparative Review Dashboard — 7 Candidates · Confidential Internal Document</div>
+  <div class="header-meta">
+    <div><span class="label">검토 대상</span><span>7명</span></div>
+    <div><span class="label">학과</span><span>전기공학부</span></div>
+    <div><span class="label">생성일</span><span>2026.05.07</span></div>
+    <div><span class="label">분야 그룹</span><span>6개 영역</span></div>
+  </div>
+</header>
+
+<!-- 요약 통계 -->
+<section class="stats-row">
+  <div class="stat-cell">
+    <div class="stat-num">7</div>
+    <div class="stat-label">Total Candidates</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num" style="color:var(--q1)">54<span style="font-size:14px;color:var(--ink-mute)"> 편</span></div>
+    <div class="stat-label">SCI(E) Q1 논문 합계</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">95<span style="font-size:14px;color:var(--ink-mute)">+</span></div>
+    <div class="stat-label">총 SCI(E) 논문</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">3</div>
+    <div class="stat-label">해외 박사 학위자</div>
+  </div>
+</section>
+
+<!-- 컨트롤 -->
+<section class="controls">
+  <div class="controls-inner">
+    <div class="control-group">
+      <span class="control-label">정렬</span>
+      <div class="sort-buttons" id="sortButtons">
+        <button class="sort-btn active" data-sort="id">접수번호 <span class="arrow">↑</span></button>
+        <button class="sort-btn" data-sort="age">연령</button>
+        <button class="sort-btn" data-sort="phd">박사연도</button>
+        <button class="sort-btn" data-sort="q1">Q1 논문</button>
+        <button class="sort-btn" data-sort="papers">총 SCI</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <span class="control-label">분야</span>
+      <div class="field-dropdown" id="fieldDropdown">
+        <button class="field-dropdown-trigger" id="fieldTrigger" type="button">
+          <span id="fieldTriggerLabel">전체 분야</span>
+          <span class="swatch-row" id="fieldTriggerSwatches"></span>
+          <span class="field-count" id="fieldCount">6/6</span>
+          <span class="caret">▼</span>
+        </button>
+        <div class="field-dropdown-panel">
+          <div class="field-dropdown-panel-header">
+            <span>연구 분야 필터</span>
+            <div class="field-dropdown-panel-actions">
+              <button class="field-dropdown-panel-action" id="fieldSelectAll" type="button">전체</button>
+              <button class="field-dropdown-panel-action" id="fieldClearAll" type="button">해제</button>
+            </div>
+          </div>
+          <div class="field-toggles" id="fieldToggles"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group" style="flex:1"></div>
+
+    <div class="control-group">
+      <input class="search-box" id="searchBox" type="text" placeholder="이름 / 키워드 검색..." />
+      <button class="expand-all-btn" id="expandAllBtn">모두 펼치기</button>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--ink-mute);margin-top:10px;padding:8px 14px;background:var(--paper-2);border:1px solid var(--line-soft);font-family:'JetBrains Mono',monospace;letter-spacing:0.02em;line-height:1.5">
+    <strong style="color:var(--ink-soft)">등급 분류 기준</strong> · <span class="tier-badge tier-Top" style="margin-left:0">★ TOP</span> Nature/Science 계열 ·
+    <span class="tier-badge tier-Q1" style="margin-left:0">Q1</span> 분야 IF 상위 25% ·
+    <span class="tier-badge tier-Q2" style="margin-left:0">Q2</span> 26–50% ·
+    <span class="tier-badge tier-Q3" style="margin-left:0">Q3</span> 51% 이하 ·
+    <span class="tier-badge tier-Scopus" style="margin-left:0">Scopus</span> 한국학회지(KCI/SCOPUS 동시 등재 다수) — 분위는 분야 IF 기반 추정치이며 최신 JCR 별도 확인 권장
+  </div>
+</section>
+
+<!-- 지원자 리스트 -->
+<main class="candidates-list" id="candidatesList"></main>
+
+<!-- 비교 차트 섹션 -->
+<section class="comparison-section">
+  <h2 class="comp-title">정량적 <em>비교 분석</em></h2>
+  <p class="comp-sub">Quantitative comparison · 저널 등급(Q1/Q2/Q3/Scopus·KCI)은 분야 IF 기준 추정치로, 정확한 분위는 분야별 JCR을 별도 확인 권장</p>
+  <div class="chart-grid">
+    <div class="chart-card">
+      <h4>SCI(E) Q1 논문 수 <span style="color:var(--q1);font-weight:500">●</span> <span style="font-size:11px;color:var(--ink-mute);font-weight:400;font-family:'JetBrains Mono',monospace">— 분야 상위 25% 저널</span></h4>
+      <div id="chartQ1"></div>
+    </div>
+    <div class="chart-card">
+      <h4>논문 등급별 분포 <span style="font-size:11px;color:var(--ink-mute);font-weight:400;font-family:'JetBrains Mono',monospace">— Q1 / Q2 / Q3 / Scopus·KCI</span></h4>
+      <div id="chartDist"></div>
+    </div>
+    <div class="chart-card">
+      <h4>총 SCI(E) 논문 수</h4>
+      <div id="chartPapers"></div>
+    </div>
+    <div class="chart-card">
+      <h4>박사학위 취득 후 경과년수</h4>
+      <div id="chartCareer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 학력·전공 적합도 매트릭스 -->
+<section class="edu-fit-section">
+  <h2 class="comp-title">학력·전공 <em>적합도 매트릭스</em></h2>
+  <p class="comp-sub">전기공학부 임용 적합성 — 학사·석사·박사 학과별 분야 적합도 매핑</p>
+
+  <div class="fit-legend">
+    <span class="legend-title">적합도 기준</span>
+    <span><span class="fit-mark fit-direct">DIRECT</span> 전기·전자·컴퓨터공학 직접 관련</span>
+    <span><span class="fit-mark fit-adjacent">ADJACENT</span> 광전자·반도체·물리·제어 등 인접</span>
+    <span><span class="fit-mark fit-convergent">CONVERGENT</span> 화학·생체·소재 등 융합</span>
+  </div>
+
+  <div class="edu-fit-table-wrapper">
+    <table class="edu-fit-table">
+      <thead>
+        <tr>
+          <th>지원자</th>
+          <th>학사</th>
+          <th>석사</th>
+          <th>박사</th>
+          <th>종합</th>
+        </tr>
+      </thead>
+      <tbody id="eduFitTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="fit-stats-row" id="fitStatsRow"></div>
+</section>
+
+<!-- 연구 논문 정량분석 (인터랙티브) -->
+<section class="quant-analysis-section">
+  <h2 class="comp-title">연구 논문 <em>정량 분석</em></h2>
+  <p class="comp-sub">Active Filtering Analysis · 가중치/필터를 조정하여 후보별 실질 연구성과를 비교</p>
+  <div class="quant-warning">
+    ⚠ MDPI(<em>Energies, Materials, Chemosensors</em>) · IEEE Access · RSC Adv. 등 양산형 OA 저널은 한국 학계에서 평가 가중치 논란이 있음 — 별도 분류
+  </div>
+
+  <div class="quant-controls">
+    <div class="quant-toggle-group">
+      <span class="control-label">필터 / 가중치 조정</span>
+      <label class="quant-toggle">
+        <input type="checkbox" id="excludeOAVolume">
+        <span class="quant-toggle-label">⚠ 양산형 OA 제외</span>
+        <span class="quant-toggle-hint">MDPI · IEEE Access · RSC Adv.</span>
+      </label>
+      <label class="quant-toggle">
+        <input type="checkbox" id="firstAuthorOnly">
+        <span class="quant-toggle-label">1저자만 (추정)</span>
+      </label>
+      <label class="quant-toggle">
+        <input type="checkbox" id="topTierOnly">
+        <span class="quant-toggle-label">Top + Q1만</span>
+      </label>
+      <label class="quant-toggle">
+        <input type="checkbox" id="recentOnly">
+        <span class="quant-toggle-label">최근 5년 (2021~)</span>
+      </label>
+      <label class="quant-toggle">
+        <input type="checkbox" id="excludeKci">
+        <span class="quant-toggle-label">Scopus·KCI 제외</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- 후보별 요약 카드 -->
+  <div class="quant-summary-cards" id="quantSummary"></div>
+
+  <!-- 차트들 -->
+  <div class="chart-grid">
+    <div class="chart-card">
+      <h4>가중 점수 (Weighted Research Score) <span style="font-size:11px;color:var(--ink-mute);font-weight:400;font-family:'JetBrains Mono',monospace;font-style:normal">— 필터 적용 후</span></h4>
+      <div id="chartScore"></div>
+      <div class="weight-legend"><strong style="color:var(--ink)">가중치</strong> · ★ Top = <strong>10</strong> · Q1 = <strong>4</strong> · Q2 = <strong>2</strong> · Q3 = <strong>1</strong> · Scopus·KCI = <strong>0.3</strong> · 1저자 보너스 ×<strong>1.5</strong></div>
+    </div>
+    <div class="chart-card">
+      <h4>OA 저널 구성 비율</h4>
+      <div class="oa-legend">
+        <span><span style="background:var(--ink)"></span>구독제</span>
+        <span><span style="background:#7A4C9F"></span>Premium OA</span>
+        <span><span style="background:#5B8DBE"></span>Standard OA</span>
+        <span><span style="background:var(--accent)"></span>⚠ Volume OA</span>
+      </div>
+      <div id="chartOA"></div>
+    </div>
+  </div>
+
+  <!-- 저자별 논문 리스트 표 -->
+  <div class="pub-table-section">
+    <h3 class="comp-title" style="font-size:20px;margin-bottom:4px">저자별 <em>논문 작성 리스트</em></h3>
+    <p class="comp-sub" style="margin-bottom:14px">전체 연구물 통합 리스트 — 컬럼 헤더 클릭으로 정렬 · 양산형 OA 행은 적색 배경</p>
+
+    <div class="pub-table-controls">
+      <select id="pubFilterAuthor"><option value="">전체 저자</option></select>
+      <select id="pubFilterTier">
+        <option value="">전체 등급</option>
+        <option value="Top">★ TOP</option>
+        <option value="Q1">SCI Q1</option>
+        <option value="Q2">SCI Q2</option>
+        <option value="Q3">SCI Q3+</option>
+        <option value="Scopus">Scopus·KCI</option>
+      </select>
+      <select id="pubFilterOA">
+        <option value="">전체 OA 유형</option>
+        <option value="V">⚠ 양산형 OA만</option>
+        <option value="P">Premium OA만</option>
+        <option value="S">Standard OA만</option>
+        <option value="none">구독제만</option>
+      </select>
+      <select id="pubFilterFA">
+        <option value="">1저자/공저자 모두</option>
+        <option value="1">1저자만</option>
+        <option value="0">공저자만</option>
+      </select>
+      <span class="pub-count" id="pubCount"></span>
+    </div>
+
+    <div class="pub-table-wrapper">
+      <table class="pub-table" id="pubTable">
+        <thead>
+          <tr>
+            <th data-key="author">저자 <span class="sort-ind">⇅</span></th>
+            <th data-key="j">저널 <span class="sort-ind">⇅</span></th>
+            <th data-key="y">연도 <span class="sort-ind">⇅</span></th>
+            <th data-key="t" style="text-align:center">등급 <span class="sort-ind">⇅</span></th>
+            <th data-key="oa" style="text-align:center">OA 유형 <span class="sort-ind">⇅</span></th>
+            <th data-key="fa" style="text-align:center">1저자 <span class="sort-ind">⇅</span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div>SOONGSIL UNIVERSITY · School of Electrical Engineering · 2026 New Faculty Search</div>
+  <div>본 자료는 임용 심사용 내부 문서입니다.</div>
+</footer>
+
+<script>
+// ============ 데이터 ============
+const FIELDS = {
+  power: {label:"전력계통/스마트그리드", color:"var(--f-power)", short:"POWER GRID"},
+  magnetic: {label:"전자기·초전도·AI설계", color:"var(--f-magnetic)", short:"E&M / SUPERCOND."},
+  organic: {label:"유연 광전자·바이오일렉트로닉스", color:"var(--f-organic)", short:"FLEX. ELECTRONICS"},
+  molecular: {label:"분자전자·뉴로모픽", color:"var(--f-molecular)", short:"MOLECULAR ELEC."},
+  energy: {label:"에너지 하베스팅·반도체 인터페이스", color:"var(--f-energy)", short:"ENERGY HARVEST."},
+  biosensor: {label:"나노바이오센서·바이오로봇", color:"var(--f-biosensor)", short:"BIO-SENSOR/ROBOT"}
+};
+
+const candidates = [
+  {
+    id:"2026040041",
+    name:"이한표",
+    nameEn:"Lee Han Pyo",
+    initials:"이",
+    birth:1980,
+    age:46,
+    field:"power",
+    fieldDetail:"AI 기반 스마트미터 분석 및 분산에너지자원 통합",
+    keywords:["AMI","스마트미터","DER","머신러닝","수요반응"],
+    edu:[
+      {deg:"Ph.D.", univ:"North Carolina State University", dept:"Electrical & Computer Engineering", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2020.08–2024.05", thesis:"Machine Learning Applications for Smart Meter Data Analysis", advisor:"Ning Lu", gpa:"4.00/4.00"},
+      {deg:"M.S.", univ:"University of Michigan", dept:"Electrical & Computer Engineering", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2018.09–2020.05", thesis:"Generation Scheduling to Limit PM2.5 Emissions and Dispersion", advisor:"Johanna Mathieu", gpa:"3.60/4.00"},
+      {deg:"학사", univ:"국내 대학", dept:"전기공학 (한전 입사 이력 기반 추정)", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2001–2006", thesis:"", gpa:"3.65/4.30"}
+    ],
+    overallFit:"direct",
+    career:[
+      {period:"2024.09–현재", role:"ERCOT (Electric Reliability Council of Texas)", desc:"전력계통 신뢰도 운영, 보조서비스, AI 분석", current:true},
+      {period:"2024.01–2024.08", role:"ERCOT — 보조서비스", desc:"Inertia 등 신뢰도 자원 평가 (박사 직후)"},
+      {period:"2008.03–2023.12", role:"한국전력공사 (KEPCO)", desc:"스마트그리드, AMI 구축, 수요반응(DR), EERS"}
+    ],
+    papers:{
+      total:7, sci:7,
+      q1:5, q2:2, q3:0, scopusKci:0,
+      firstAuthorEst:6,
+      topJournals:[
+        {name:"Applied Energy ×2", tier:"Q1"},
+        {name:"IEEE Trans. Power Delivery", tier:"Q1"},
+        {name:"IEEE Trans. Smart Grid ×2", tier:"Q1"},
+        {name:"IEEE Access", tier:"Q2"},
+        {name:"Sustainable Energy, Grids and Networks", tier:"Q2"}
+      ]
+    },
+    pubs:[
+      {j:"Applied Energy",y:2026,t:"Q1",oa:null,fa:true},
+      {j:"Applied Energy",y:2024,t:"Q1",oa:null,fa:true},
+      {j:"IEEE Trans. Power Delivery",y:2024,t:"Q1",oa:null,fa:true},
+      {j:"IEEE Access",y:2023,t:"Q2",oa:"V",fa:true},
+      {j:"IEEE Trans. Smart Grid",y:2023,t:"Q1",oa:null,fa:true},
+      {j:"IEEE Trans. Smart Grid",y:2023,t:"Q1",oa:null,fa:false},
+      {j:"Sustainable Energy, Grids and Networks",y:2026,t:"Q2",oa:null,fa:true}
+    ],
+    patents:7,
+    awards:["IEEE Senior Member (2024)","Gulf Coast Power Association Scholarship (2023)","Mentored Teaching Fellowship — NCSU (2022)","Graduate Merit Award — NCSU (2020)"],
+    insight:"한전 16년의 두꺼운 산업 현장 경험과 미국 명문 박사·ERCOT 글로벌 운영기관 경험이 결합. 7편의 SCI 논문이 모두 Applied Energy/IEEE TSG 등 분야 Top-tier에 집중되어 양보다 질에서 안정적. 전력계통 학부의 산학 연계와 실무형 교육에 즉시 기여 가능한 시니어급 후보."
+  },
+  {
+    id:"2026040102",
+    name:"서경식",
+    nameEn:"Seo Kyungsik",
+    initials:"서",
+    birth:1988,
+    age:38,
+    field:"magnetic",
+    fieldDetail:"E.P.I. 철학 기반 Physics-driven AI 전기·자기 시스템 설계",
+    keywords:["초전도","양자컴퓨팅","MRI","PINN","민감도해석"],
+    edu:[
+      {deg:"Ph.D.", univ:"국내 대학교", dept:"전기공학과 (전기방전·다물리 시스템)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2015.03–2020.02", thesis:"Multi-Physics Numerical Analysis and Optimal Design of Electrical Discharge System", gpa:"4.11/4.50"},
+      {deg:"M.S.", univ:"국내 대학교", dept:"전기공학과 (BLDC 모터)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2013.03–2015.02", thesis:"BLDC 관련 연구", gpa:"4.27/4.50"},
+      {deg:"학사", univ:"국내 대학교", dept:"전기공학과 추정", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2006–2013", gpa:"3.57/4.50"}
+    ],
+    overallFit:"direct",
+    career:[
+      {period:"2023.09–현재", role:"연구교수 (국내)", desc:"전자기·초전도 시스템 최적설계, 양자회로 민감도해석", current:true},
+      {period:"2022.03–2023.08", role:"연구원", desc:""},
+      {period:"2021.02–2022.02", role:"University of Cambridge — Visiting Research Fellow", desc:"🇬🇧 초전도 양자 시스템 연구"},
+      {period:"2020.03–2022.02", role:"박사후연구원", desc:""}
+    ],
+    papers:{
+      total:9, sci:9,
+      q1:2, q2:3, q3:4, scopusKci:0,
+      firstAuthorEst:5,
+      topJournals:[
+        {name:"Structural & Multidisc. Optimization ×2", tier:"Q1"},
+        {name:"J. Phys. D: Applied Physics", tier:"Q2"},
+        {name:"J. Magnetism and Magnetic Materials", tier:"Q2"},
+        {name:"IEEE Trans. Magnetics", tier:"Q2"},
+        {name:"IEEE Trans. Applied Superconductivity ×4", tier:"Q3"}
+      ]
+    },
+    pubs:[
+      {j:"Structural & Multidisc. Optimization",y:2021,t:"Q1",oa:null,fa:false},
+      {j:"Structural & Multidisc. Optimization",y:2023,t:"Q1",oa:null,fa:false},
+      {j:"IEEE Trans. Applied Superconductivity",y:2023,t:"Q3",oa:null,fa:true},
+      {j:"J. Phys. D: Applied Physics",y:2023,t:"Q2",oa:null,fa:true},
+      {j:"IEEE Trans. Applied Superconductivity",y:2024,t:"Q3",oa:null,fa:false},
+      {j:"IEEE Trans. Applied Superconductivity",y:2024,t:"Q3",oa:null,fa:true},
+      {j:"J. Magnetism and Magnetic Materials",y:2025,t:"Q2",oa:null,fa:false},
+      {j:"IEEE Trans. Magnetics",y:2025,t:"Q2",oa:null,fa:false},
+      {j:"IEEE Trans. Applied Superconductivity",y:2026,t:"Q3",oa:null,fa:false}
+    ],
+    patents:0,
+    awards:["다수의 학회 우수논문상 (2015, 2023)","대한전기학회 학술상"],
+    insight:"전자기·초전도·양자회로·MRI까지 폭넓은 멀티-피직스 설계 역량을 가진 후보. PINN 기반 물리-AI 융합 연구방향이 명확하고 'E.P.I.(Easy/Practical/Interactive)' 교육 철학이 구체적. Cambridge 방문연구원 경력과 SMO·IEEE TASC 9편의 안정적 논문 실적은 신임교수로서 균형 잡힌 프로필."
+  },
+  {
+    id:"2026040148",
+    name:"이용주",
+    nameEn:"Lee Yongju",
+    initials:"이",
+    birth:1993,
+    age:33,
+    field:"organic",
+    fieldDetail:"유기 트랜지스터·CMOS·전자피부 통합 바이오일렉트로닉스",
+    keywords:["유기CMOS","전자피부","유기태양전지","의료센서","AI헬스케어"],
+    edu:[
+      {deg:"Ph.D.", univ:"국내 + Université Paris Cité (공동)", dept:"전자공학·광전자공학 (집적회로·바이오일렉트로닉스)", deptInferred:false, fit:"adjacent", country:"🇰🇷·🇫🇷", period:"2022.03–2026.02", thesis:"Flexible Optoelectronic Systems for Integrated Circuits and Bioelectronics", advisor:"Philippe Lang (Paris Cité)", gpa:"4.50/4.50"},
+      {deg:"M.S.", univ:"국내 대학교", dept:"전자공학 (유기 광다이오드)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2020.03–2022.02", thesis:"Self-powered Organic Photodiode for Near-Infrared Sensing", gpa:"4.50/4.50"},
+      {deg:"학사", univ:"국내 대학교", dept:"전자·재료공학 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2012–2019", gpa:"3.57/4.50"}
+    ],
+    overallFit:"adjacent",
+    career:[
+      {period:"2026.03–현재", role:"박사후연구원 — UCLA (CMOS 의료기기)", desc:"미국, 유기 CMOS 기반 웨어러블 의료기기", current:true},
+      {period:"2022.07–2023.03", role:"Terasaki Institute for Biomedical Innovation 인턴", desc:"🇺🇸 LA, 의료용 광전자 시스템"},
+      {period:"2020.09–2022.02", role:"국내 연구원", desc:""},
+      {period:"2019.09–2020.02", role:"기업 연구원", desc:""}
+    ],
+    papers:{
+      total:28, sci:24,
+      q1:12, q2:11, q3:1, scopusKci:4,
+      firstAuthorEst:9,
+      topJournals:[
+        {name:"Nature Sensors", tier:"Top"},
+        {name:"Science Advances", tier:"Top"},
+        {name:"Nature Communications", tier:"Top"},
+        {name:"Advanced Materials (revision)", tier:"Top"},
+        {name:"Nature Biomedical Eng. (minor rev.)", tier:"Top"},
+        {name:"Advanced Energy Materials", tier:"Q1"},
+        {name:"Advanced Functional Materials ×2", tier:"Q1"},
+        {name:"Small ×2", tier:"Q1"},
+        {name:"Solar RRL ×3", tier:"Q1"},
+        {name:"Adv. Sustainable Systems", tier:"Q1"},
+        {name:"IEEE IoT Journal", tier:"Q1"},
+        {name:"Applied Surface Science", tier:"Q1"},
+        {name:"Int. J. Energy Research ×2", tier:"Q2"},
+        {name:"Energy Technology", tier:"Q2"},
+        {name:"ACS Applied Energy Materials", tier:"Q2"},
+        {name:"Materials Today Communications", tier:"Q2"},
+        {name:"한국 학회지·SCOPUS ×4", tier:"Scopus"}
+      ]
+    },
+    pubs:[
+      {j:"Nature Sensors",y:2026,t:"Top",oa:"P",fa:true},
+      {j:"Science Advances",y:2025,t:"Top",oa:"P",fa:true},
+      {j:"Nature Communications",y:2025,t:"Top",oa:"P",fa:true},
+      {j:"Advanced Energy Materials",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"한국 학회지(SCOPUS)",y:2025,t:"Scopus",oa:null,fa:false},
+      {j:"Materials Today Communications",y:2024,t:"Q2",oa:null,fa:false},
+      {j:"한국 학회지(SCOPUS)",y:2023,t:"Scopus",oa:null,fa:false},
+      {j:"Solar RRL",y:2023,t:"Q1",oa:"S",fa:false},
+      {j:"Int. J. Energy Research",y:2022,t:"Q2",oa:null,fa:false},
+      {j:"J. Applied Polymer Science",y:2022,t:"Q2",oa:null,fa:false},
+      {j:"Int. J. Energy Research",y:2022,t:"Q2",oa:null,fa:false},
+      {j:"Thin Solid Films",y:2022,t:"Q3",oa:null,fa:false},
+      {j:"Applied Sci. and Convergence Tech.",y:2021,t:"Scopus",oa:null,fa:false},
+      {j:"Small",y:2026,t:"Q1",oa:null,fa:true},
+      {j:"Small",y:2026,t:"Q1",oa:null,fa:true},
+      {j:"ACS Applied Energy Materials",y:2026,t:"Q2",oa:null,fa:true},
+      {j:"J. Information Display",y:2025,t:"Q2",oa:null,fa:false},
+      {j:"Energy Technology",y:2025,t:"Q2",oa:null,fa:false},
+      {j:"Dyes and Pigments",y:2025,t:"Q2",oa:null,fa:false},
+      {j:"ACS Applied Electronic Materials",y:2024,t:"Q2",oa:null,fa:false},
+      {j:"Solar RRL",y:2024,t:"Q1",oa:"S",fa:false},
+      {j:"Adv. Functional Materials",y:2024,t:"Q1",oa:null,fa:false},
+      {j:"Applied Surface Science",y:2024,t:"Q1",oa:null,fa:false},
+      {j:"Small Science",y:2024,t:"Q1",oa:"S",fa:true},
+      {j:"Exploration",y:2023,t:"Q1",oa:"S",fa:false},
+      {j:"JPhys Materials",y:2023,t:"Q2",oa:null,fa:false},
+      {j:"RSC Advances",y:2023,t:"Q2",oa:"V",fa:false},
+      {j:"Adv. Sustainable Systems",y:2023,t:"Q1",oa:"S",fa:false},
+      {j:"IEEE Internet of Things J.",y:2023,t:"Q1",oa:null,fa:true},
+      {j:"Adv. Functional Materials",y:2023,t:"Q1",oa:null,fa:false},
+      {j:"한국 학회지(SCOPUS)",y:2022,t:"Scopus",oa:null,fa:false},
+      {j:"Solar RRL",y:2022,t:"Q1",oa:"S",fa:true},
+      {j:"한국 학회지(SCOPUS)",y:2021,t:"Scopus",oa:null,fa:false}
+    ],
+    patents:0,
+    awards:["2026 신진연구자상","2025 우수논문상","2023 우수신진연구자","IEEE-NEMS 2023 Best Poster","60주년 우수논문 등 총 12개"],
+    insight:"33세에 28편의 SCI 논문(1저자 9편)을 보유한 압도적 연구 생산성. Nature Sensors·Science Advances·Nature Communications 등 최상위 저널 다수 게재. 한·프 공동박사 + Terasaki Institute + UCLA 박사후 글로벌 트랙 + 거대한 학회상 리스트는 채용 시장 최상급. CMOS·전자피부·AI 헬스케어로 학과의 유기/플렉시블 일렉트로닉스 신규 영역을 강력히 개척 가능."
+  },
+  {
+    id:"2026040199",
+    name:"어정선",
+    nameEn:"Eo Jung Sun",
+    initials:"어",
+    birth:1994,
+    age:31,
+    field:"molecular",
+    fieldDetail:"1D/2D 분자 헤테로정션 기반 뉴로모픽·인메모리 컴퓨팅",
+    keywords:["분자스케일소자","뉴로모픽","리저버컴퓨팅","인메모리","AFM"],
+    edu:[
+      {deg:"Ph.D.", univ:"KU-KIST 융합대학원", dept:"NBIT (나노바이오기술 융합) — 분자전자·뉴로모픽", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2019.09–2025.02", thesis:"Mixed-dimensional molecular functional heterojunction via 1D/2D interfacial band engineering", gpa:"4.47/4.50"},
+      {deg:"M.S.", univ:"국내 대학교", dept:"분자·나노전자 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2017.03–2019.02", gpa:"3.88/4.50"},
+      {deg:"학사", univ:"국내 대학교", dept:"화학·소재공학 추정", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"2014–2017", gpa:"4.39/4.50"}
+    ],
+    overallFit:"adjacent",
+    career:[
+      {period:"2025.07–현재", role:"University of Cambridge — Postdoctoral Research", desc:"🇬🇧 분자전자 시스템, AFM 기반 단일분자 측정", current:true},
+      {period:"2025.03–2025.06", role:"Research Professor (국내)", desc:""},
+      {period:"2019.03–2019.08", role:"국내 연구원", desc:""}
+    ],
+    papers:{
+      total:8, sci:8,
+      q1:8, q2:0, q3:0, scopusKci:0,
+      firstAuthorEst:4,
+      topJournals:[
+        {name:"ACS Nano", tier:"Top"},
+        {name:"Nature Communications", tier:"Top"},
+        {name:"Advanced Functional Materials ×2", tier:"Q1"},
+        {name:"Advanced Science ×2", tier:"Q1"},
+        {name:"Nano Energy", tier:"Q1"},
+        {name:"Small Methods", tier:"Q1"}
+      ]
+    },
+    pubs:[
+      {j:"ACS Nano",y:2025,t:"Top",oa:null,fa:false},
+      {j:"Nano Energy",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"Adv. Functional Materials",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"Nature Communications",y:2024,t:"Top",oa:"P",fa:false},
+      {j:"Adv. Functional Materials",y:2023,t:"Q1",oa:null,fa:true},
+      {j:"Small Methods",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"Adv. Science",y:2022,t:"Q1",oa:"S",fa:false},
+      {j:"Adv. Science",y:2021,t:"Q1",oa:"S",fa:true}
+    ],
+    patents:0,
+    awards:["KPS-KOFWST 학회상 (2021)","KU Achievement Award (2024)","KU-KIST 우수논문상 등 총 12개 학회·학생상","국가보훈가족 대상 (1995.04.16)"],
+    insight:"31세 최연소 후보, KU-KIST 박사 → Cambridge 박사후의 깔끔한 학술 트랙. 분자 스케일에서 뉴로모픽·리저버 컴퓨팅까지 차세대 컴퓨팅 패러다임을 다루는 전기공학부 미래지향적 영입. Nature Comm., ACS Nano, Adv. Funct. Mater. 등 1저자 핵심 실적이 명확. 보훈가족 가산 대상자."
+  },
+  {
+    id:"2026040232",
+    name:"문원식",
+    nameEn:"Moon Wonsik",
+    initials:"문",
+    birth:1982,
+    age:44,
+    field:"power",
+    fieldDetail:"MVDC·배전계통 운영전략 및 분산자원 수용용량 분석",
+    keywords:["배전계통","MVDC","DER","호스팅용량","Voltage Margin"],
+    edu:[
+      {deg:"Ph.D.", univ:"국내 대학교", dept:"전기공학과 (전력계통·배전)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2011.09–2016.02", gpa:"4.17/4.50"},
+      {deg:"M.S.", univ:"국내 대학교", dept:"전기공학과 (전력계통)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2009.09–2011.08", gpa:"4.38/4.50"},
+      {deg:"학사", univ:"국내 대학교", dept:"전기공학과", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2001.03–2009.08", gpa:"3.74/4.50"}
+    ],
+    overallFit:"direct",
+    career:[
+      {period:"2019.09–현재", role:"연구교수 (국내)", desc:"배전·MVDC·DER 운영 연구, 학부 강의", current:true},
+      {period:"2016.04–2019.08", role:"LG (산업체)", desc:"전력계통 관련 산업 R&D"}
+    ],
+    career2:[
+      {period:"2009.09–현재", role:"학회 활동 — 대한전기학회 외", desc:"15년+ 전기학회 위원/감사"}
+    ],
+    papers:{
+      total:14, sci:6,
+      q1:0, q2:3, q3:3, scopusKci:8,
+      firstAuthorEst:3,
+      topJournals:[
+        {name:"IEEE Access ×3", tier:"Q2"},
+        {name:"Energies ×3", tier:"Q3"},
+        {name:"대한전기학회논문지 ×8 (KCI/SCOPUS)", tier:"Scopus"}
+      ]
+    },
+    pubs:[
+      {j:"Energies (MDPI)",y:2025,t:"Q3",oa:"V",fa:false},
+      {j:"IEEE Access",y:2025,t:"Q2",oa:"V",fa:true},
+      {j:"IEEE Access",y:2024,t:"Q2",oa:"V",fa:false},
+      {j:"Energies (MDPI)",y:2024,t:"Q3",oa:"V",fa:false},
+      {j:"IEEE Access",y:2023,t:"Q2",oa:"V",fa:false},
+      {j:"Energies (MDPI)",y:2022,t:"Q3",oa:"V",fa:false},
+      {j:"대한전기학회논문지",y:2025,t:"Scopus",oa:null,fa:true},
+      {j:"대한전기학회논문지",y:2026,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2025,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2024,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2024,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2024,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2023,t:"Scopus",oa:null,fa:false},
+      {j:"대한전기학회논문지",y:2023,t:"Scopus",oa:null,fa:false}
+    ],
+    patents:1,
+    awards:["대한전기학회 우수논문상 등 7회 수상","저서 1권 (5인 공저, 2026.03)"],
+    insight:"산업체(LG) + 9년 연구교수 + 학회 임원의 안정적인 시니어 트랙. SCI·KCI 합 14편으로 양적 실적은 중간이지만, 배전·MVDC·VPP 등 학과 전공 주류 영역에 대한 깊은 지식과 학회 네트워크는 분명한 자산. 학부 강의·산학연계·학회 운영의 3박자 균형형 후보."
+  },
+  {
+    id:"2026040244",
+    name:"이원형",
+    nameEn:"Lee Won Hyung",
+    initials:"원",
+    birth:1989,
+    age:36,
+    field:"energy",
+    fieldDetail:"Ionovoltaics — 이온/반도체 계면 상호작용 기반 에너지 하베스팅",
+    keywords:["Ionovoltaics","에너지하베스팅","자가발전센서","산화물반도체","SAM"],
+    edu:[
+      {deg:"Ph.D.", univ:"국내 대학교", dept:"반도체·이온전자 (Ionovoltaics 융합)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2017.09–2023.08", thesis:"Investigation of ion-charge interactions via semiconductor analysis: a fundamental study of ionovoltaics", gpa:"4.13/4.50"},
+      {deg:"학사", univ:"Pennsylvania State University", dept:"Physics (Mathematics minor)", deptInferred:false, fit:"adjacent", country:"🇺🇸 USA", period:"2008.08–2016.05", thesis:"Physics, Mathematics(minor)", gpa:"3.14/4.50"}
+    ],
+    overallFit:"adjacent",
+    career:[
+      {period:"2023.09–현재", role:"삼성SDI", desc:"산업체 연구원 — 차세대 에너지/소재 R&D", current:true}
+    ],
+    papers:{
+      total:22, sci:22,
+      q1:18, q2:3, q3:1, scopusKci:0,
+      firstAuthorEst:6,
+      topJournals:[
+        {name:"Advanced Materials ×2", tier:"Top"},
+        {name:"Energy & Environmental Sciences", tier:"Top"},
+        {name:"Advanced Functional Materials", tier:"Q1"},
+        {name:"Advanced Science ×2", tier:"Q1"},
+        {name:"Nano Energy ×6", tier:"Q1"},
+        {name:"Small / Small Methods ×2", tier:"Q1"},
+        {name:"ACS Applied Materials & Interfaces ×2", tier:"Q1"},
+        {name:"Materials Today Electronics", tier:"Q1"},
+        {name:"EcoMat (review)", tier:"Q1"},
+        {name:"ACS Applied Energy/Electronic Mat. ×3", tier:"Q2"},
+        {name:"Applied Physics Express", tier:"Q3"}
+      ]
+    },
+    pubs:[
+      {j:"Adv. Materials",y:2021,t:"Top",oa:null,fa:true},
+      {j:"Materials Today Electronics",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"EcoMat",y:2023,t:"Q1",oa:"S",fa:false},
+      {j:"Adv. Science",y:2024,t:"Q1",oa:"S",fa:true},
+      {j:"ACS Applied Materials & Interfaces",y:2025,t:"Q1",oa:null,fa:true},
+      {j:"Nano Energy",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"Nano Energy",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"Nano Energy",y:2023,t:"Q1",oa:null,fa:false},
+      {j:"Nano Energy",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"Nano Energy",y:2021,t:"Q1",oa:null,fa:false},
+      {j:"Nano Energy",y:2019,t:"Q1",oa:null,fa:true},
+      {j:"Adv. Functional Materials",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"Adv. Science",y:2022,t:"Q1",oa:"S",fa:false},
+      {j:"Small",y:2021,t:"Q1",oa:null,fa:false},
+      {j:"Small Methods",y:2021,t:"Q1",oa:null,fa:false},
+      {j:"Energy & Environmental Sciences",y:2020,t:"Top",oa:null,fa:true},
+      {j:"ACS Applied Energy Materials",y:2019,t:"Q2",oa:null,fa:true},
+      {j:"ACS Applied Electronic Materials",y:2019,t:"Q2",oa:null,fa:false},
+      {j:"ACS Applied Electronic Materials",y:2019,t:"Q2",oa:null,fa:false},
+      {j:"Applied Physics Express",y:2019,t:"Q3",oa:null,fa:false},
+      {j:"Adv. Materials",y:2019,t:"Top",oa:null,fa:true},
+      {j:"ACS Applied Materials & Interfaces",y:2018,t:"Q1",oa:null,fa:false}
+    ],
+    patents:0,
+    awards:["Ionovoltaics 분야 개척 — EcoMat 종설논문 발표","박사 졸업 후 산업체 정착 (삼성SDI)"],
+    insight:"미국 학부(Penn State) + 국내 박사 + 삼성SDI의 학·산 융합 트랙. 'Ionovoltaics'라는 본인이 개척한 신생 연구분야에서 21편의 SCI(Adv. Mat., EES 포함)를 축적한 독창적 후보. 반도체-이온 계면 물리에서 자가발전 센서·Hall 효과 변조까지 학부 전공(전기·물리·반도체)을 모두 아우르는 융합형 인재. 학과의 차세대 센서/IoT 전원 영역을 선도할 수 있음."
+  },
+  {
+    id:"2026040275",
+    name:"김웅",
+    nameEn:"Kim Woong",
+    initials:"김",
+    birth:1990,
+    age:36,
+    field:"biosensor",
+    fieldDetail:"나노바이오센서 (SERS) 및 NMJ 기반 광유전 바이오로봇",
+    keywords:["SERS","바이오로봇","광유전학","NMJ","나노센서"],
+    edu:[
+      {deg:"Ph.D.", univ:"국내 대학교", dept:"기계·전자 융합 (나노바이오센서·SERS)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2015.03–2021.08", thesis:"Detection of Toxicants using Nanostructure via Electrical and Optical Sensors", gpa:"4.22/4.50"},
+      {deg:"학사", univ:"국내 대학교", dept:"기계·전자공학 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2009.03–2015.02", gpa:"3.78/4.50"}
+    ],
+    overallFit:"adjacent",
+    career:[
+      {period:"2026.02–현재", role:"국내 연구원", desc:"", current:true},
+      {period:"2023.04–2025.12", role:"University of Illinois at Urbana-Champaign — Postdoctoral", desc:"🇺🇸 Holonyak Micro&Nanotechnology Lab, NMJ·바이오로봇"},
+      {period:"2022.03–2023.03", role:"국내 연구원", desc:""},
+      {period:"2021.09–2022.02", role:"4단계 BK21 박사후연구원", desc:""}
+    ],
+    papers:{
+      total:17, sci:15,
+      q1:9, q2:6, q3:0, scopusKci:0,
+      firstAuthorEst:6,
+      topJournals:[
+        {name:"Science Robotics", tier:"Top"},
+        {name:"Biosensors and Bioelectronics ×2", tier:"Top"},
+        {name:"Journal of Hazardous Materials", tier:"Top"},
+        {name:"Advanced Materials (review)", tier:"Top"},
+        {name:"Sensors and Actuators B", tier:"Q1"},
+        {name:"ACS Sustainable Chem. Eng.", tier:"Q1"},
+        {name:"J. Materials Sci. & Tech.", tier:"Q1"},
+        {name:"Microchemical Journal", tier:"Q1"},
+        {name:"Device", tier:"Q1"},
+        {name:"Sensors and Actuators A", tier:"Q2"},
+        {name:"Materials ×2", tier:"Q2"},
+        {name:"Spectrochim. Acta A", tier:"Q2"},
+        {name:"Chemosensors", tier:"Q2"},
+        {name:"Interface Focus", tier:"Q2"}
+      ]
+    },
+    pubs:[
+      {j:"Interface Focus",y:2026,t:"Q2",oa:null,fa:true},
+      {j:"Sensors and Actuators A",y:2026,t:"Q1",oa:null,fa:false},
+      {j:"Science Robotics",y:2025,t:"Top",oa:null,fa:false},
+      {j:"Microchemical Journal",y:2025,t:"Q1",oa:null,fa:false},
+      {j:"Biosensors and Bioelectronics",y:2024,t:"Top",oa:null,fa:true},
+      {j:"Device",y:2024,t:"Q1",oa:null,fa:false},
+      {j:"Spectrochim. Acta A",y:2024,t:"Q2",oa:null,fa:false},
+      {j:"J. Hazardous Materials",y:2023,t:"Top",oa:null,fa:true},
+      {j:"Chemosensors (MDPI)",y:2023,t:"Q2",oa:"V",fa:false},
+      {j:"Materials (MDPI)",y:2022,t:"Q2",oa:"V",fa:false},
+      {j:"Materials (MDPI)",y:2022,t:"Q2",oa:"V",fa:false},
+      {j:"Sensors and Actuators B",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"J. Materials Sci. & Tech.",y:2022,t:"Q1",oa:null,fa:false},
+      {j:"ACS Sustainable Chem. Eng.",y:2022,t:"Q1",oa:null,fa:true},
+      {j:"Biosensors and Bioelectronics",y:2021,t:"Top",oa:null,fa:true}
+    ],
+    patents:3,
+    awards:["KSME-SEMES 우수논문상 (2회)","KU Graduate Student Achievement Award (2회)","교내 우수논문상 다수"],
+    insight:"UIUC(Holonyak Lab) 2.7년 박사후 + Science Robotics 게재라는 강력한 글로벌 카드. 광유전학 NMJ 기반 미니 바이오로봇 분야는 전기공학·광·바이오 융합의 차세대 hot topic. SERS 나노바이오센서 17편 + 특허 3건의 응용 지향성도 명확. 학과의 바이오메디컬 일렉트로닉스/센서 영역 신규 개척에 강력한 인재."
+  }
+];
+
+// ============ 렌더링 ============
+const listEl = document.getElementById('candidatesList');
+const fieldTogglesEl = document.getElementById('fieldToggles');
+const sortBtnsEl = document.getElementById('sortButtons');
+const searchEl = document.getElementById('searchBox');
+const expandAllBtn = document.getElementById('expandAllBtn');
+
+let activeFields = new Set(Object.keys(FIELDS));
+let currentSort = 'id';
+let sortDirection = 1; // 1: asc, -1: desc
+let allExpanded = false;
+
+// 분야 토글
+function renderFieldToggles(){
+  fieldTogglesEl.innerHTML = Object.entries(FIELDS).map(([k,v])=>`
+    <button class="field-toggle active" data-field="${k}" style="--field-color:${v.color}">
+      <span class="swatch" style="background:${v.color}"></span>${v.label}
+    </button>`).join('');
+  fieldTogglesEl.querySelectorAll('.field-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const f = btn.dataset.field;
+      if(activeFields.has(f)) activeFields.delete(f);
+      else activeFields.add(f);
+      btn.classList.toggle('active');
+      updateFieldTrigger();
+      renderList();
+    });
+  });
+}
+
+// 드롭다운 트리거 라벨/카운트/스워치 동기화
+function updateFieldTrigger(){
+  const total = Object.keys(FIELDS).length;
+  const n = activeFields.size;
+  document.getElementById('fieldCount').textContent = `${n}/${total}`;
+  const label = document.getElementById('fieldTriggerLabel');
+  const trigger = document.getElementById('fieldTrigger');
+  if(n===total){ label.textContent = '전체 분야'; trigger.classList.remove('partial'); }
+  else if(n===0){ label.textContent = '분야 선택 안 함'; trigger.classList.add('partial'); }
+  else { label.textContent = `${n}개 선택`; trigger.classList.add('partial'); }
+  // 스워치 미리보기 (선택된 분야 색)
+  const swatchEl = document.getElementById('fieldTriggerSwatches');
+  swatchEl.innerHTML = Object.entries(FIELDS).filter(([k])=>activeFields.has(k)).map(([k,v])=>`<span class="mini-dot" style="--c:${v.color}"></span>`).join('');
+}
+
+// 드롭다운 열기/닫기
+document.getElementById('fieldTrigger').addEventListener('click', e=>{
+  e.stopPropagation();
+  document.getElementById('fieldDropdown').classList.toggle('open');
+});
+document.addEventListener('click', e=>{
+  if(!e.target.closest('.field-dropdown')){
+    document.getElementById('fieldDropdown').classList.remove('open');
+  }
+});
+// 패널 내부 클릭 시 닫히지 않도록
+document.querySelector('.field-dropdown-panel').addEventListener('click', e=>e.stopPropagation());
+
+// 전체/해제 액션
+document.getElementById('fieldSelectAll').addEventListener('click', ()=>{
+  activeFields = new Set(Object.keys(FIELDS));
+  document.querySelectorAll('#fieldToggles .field-toggle').forEach(b=>b.classList.add('active'));
+  updateFieldTrigger();
+  renderList();
+});
+document.getElementById('fieldClearAll').addEventListener('click', ()=>{
+  activeFields = new Set();
+  document.querySelectorAll('#fieldToggles .field-toggle').forEach(b=>b.classList.remove('active'));
+  updateFieldTrigger();
+  renderList();
+});
+
+// 카드 렌더링
+function buildCard(c){
+  const fieldData = FIELDS[c.field];
+  const fieldColor = fieldData.color;
+  const phdYear = parseInt(c.edu[0].period.match(/(\d{4})/g).pop());
+  const careerSince = phdYear;
+  const yearsSincePhD = 2026 - phdYear;
+
+  return `
+  <article class="candidate-card" data-id="${c.id}" data-field="${c.field}" data-name="${c.name} ${c.nameEn}" data-keywords="${c.keywords.join(' ')}" style="--field-color:${fieldColor}">
+    <div class="card-field-bar"></div>
+    <div class="card-header" onclick="toggleCard('${c.id}')">
+      <div class="avatar">${c.initials}</div>
+      <div class="card-main">
+        <div class="identity">
+          <div class="name">${c.name}</div>
+          <div class="name-en">${c.nameEn} · ${c.id}</div>
+          <div class="meta-row">
+            <span>${c.age}세 (${c.birth}년생)</span>
+            <span>박사 ${phdYear}</span>
+          </div>
+        </div>
+        <div class="field-info">
+          <span class="field-tag">${fieldData.short}</span>
+          <div class="field-detail">${c.fieldDetail}</div>
+          <div class="keyword-row">
+            ${c.keywords.map(k=>`<span class="keyword">#${k}</span>`).join('')}
+          </div>
+        </div>
+        <div class="metrics-mini">
+          <div class="mini-metric highlight">
+            <div class="num">${c.papers.q1}</div>
+            <div class="lbl">Q1 논문</div>
+          </div>
+          <div class="mini-metric">
+            <div class="num">${c.papers.sci}</div>
+            <div class="lbl">총 SCI(E)</div>
+          </div>
+          <div class="mini-metric">
+            <div class="num">${c.papers.firstAuthorEst}</div>
+            <div class="lbl">1저자</div>
+          </div>
+          <div class="mini-metric">
+            <div class="num">${yearsSincePhD}<span style="font-size:13px;color:var(--ink-mute)">y</span></div>
+            <div class="lbl">박사후</div>
+          </div>
+        </div>
+      </div>
+      <div class="expand-icon">⌄</div>
+    </div>
+
+    <div class="card-detail">
+      <div class="detail-inner">
+
+        <!-- LEFT COLUMN -->
+        <div>
+          <div class="detail-section">
+            <div class="section-title">학력 (Education) — <span style="color:var(--ink-mute);font-weight:500;font-size:10px;letter-spacing:0.06em">학과명 및 전기공학부 적합도 표시</span></div>
+            <table class="edu-table">
+              <thead>
+                <tr><th style="width:50px">학위</th><th>기관 / 학과</th><th style="width:90px">기간</th><th style="width:90px">GPA</th></tr>
+              </thead>
+              <tbody>
+                ${c.edu.map(e=>`
+                <tr>
+                  <td><span class="deg">${e.deg}</span></td>
+                  <td>
+                    <div class="univ">${e.univ}${e.country?` <span style="color:var(--ink-mute);font-weight:400">· ${e.country}</span>`:''}</div>
+                    ${e.dept?`<div class="dept-line">
+                      <span class="dept-text">${e.dept}${e.deptInferred?'<span class="inferred-mark">추정</span>':''}</span>
+                      ${e.fit?`<span class="fit-mark fit-${e.fit}">${e.fit.toUpperCase()}</span>`:''}
+                    </div>`:''}
+                    ${e.thesis?`<span class="thesis">${e.thesis}${e.advisor?` — adv. ${e.advisor}`:''}</span>`:''}
+                  </td>
+                  <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute)">${e.period||''}</td>
+                  <td>${e.gpa?`<span class="gpa-display">${e.gpa.split('/')[0]}<span class="scale">/${e.gpa.split('/')[1]}</span></span>`:''}</td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-title">경력 (Career)</div>
+            <div class="career-timeline">
+              ${c.career.map(e=>`
+                <div class="career-item ${e.current?'current':''}">
+                  <div class="career-period">${e.period}</div>
+                  <div class="career-role">${e.role}</div>
+                  ${e.desc?`<div class="career-desc">${e.desc}</div>`:''}
+                </div>`).join('')}
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-title">연구 성과 (Publications)</div>
+
+            <div class="quality-grid">
+              <div class="quality-cell q1 ${c.papers.q1===0?'zero':''}"><div class="n">${c.papers.q1}</div><div class="l">SCI Q1</div></div>
+              <div class="quality-cell q2 ${c.papers.q2===0?'zero':''}"><div class="n">${c.papers.q2}</div><div class="l">SCI Q2</div></div>
+              <div class="quality-cell q3 ${c.papers.q3===0?'zero':''}"><div class="n">${c.papers.q3}</div><div class="l">SCI Q3+</div></div>
+              <div class="quality-cell scopus ${c.papers.scopusKci===0?'zero':''}"><div class="n">${c.papers.scopusKci}</div><div class="l">Scopus·KCI</div></div>
+              <div class="quality-cell first"><div class="num n" style="color:var(--field-color)">${c.papers.firstAuthorEst}</div><div class="l">1저자(추정)</div></div>
+            </div>
+
+            ${(()=>{ 
+              const tot = c.papers.q1+c.papers.q2+c.papers.q3+c.papers.scopusKci || 1;
+              const p = (n)=>(n/tot*100).toFixed(1)+'%';
+              return `<div class="quality-bar" title="등급별 비율">
+                <div class="seg-q1" style="width:${p(c.papers.q1)}"></div>
+                <div class="seg-q2" style="width:${p(c.papers.q2)}"></div>
+                <div class="seg-q3" style="width:${p(c.papers.q3)}"></div>
+                <div class="seg-scopus" style="width:${p(c.papers.scopusKci)}"></div>
+              </div>`;
+            })()}
+
+            <div style="font-size:11px;color:var(--ink-mute);margin-bottom:6px;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;display:flex;justify-content:space-between;align-items:baseline">
+              <span>주요 게재 저널</span>
+              <span style="font-size:9.5px;font-style:italic;font-family:'Fraunces',serif">★ = Nature/Science 계열</span>
+            </div>
+            <div class="top-journals">
+              ${c.papers.topJournals.map(j=>`
+                <span class="journal-pill">${j.name}<span class="tier-badge tier-${j.tier}">${j.tier}</span></span>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+          <div class="detail-section">
+            <div class="section-title">수상 / 특허 (Awards & Patents)</div>
+            <ul class="list-items">
+              ${c.awards.map(a=>`<li>${a}</li>`).join('')}
+              ${c.patents>0?`<li><strong>특허 ${c.patents}건</strong> 보유</li>`:''}
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-title">평가 인사이트 (Reviewer Note)</div>
+            <div class="insight-box">
+              <div class="insight-label">CO-ORDINATOR'S NOTE</div>
+              <div class="insight-text">${c.insight}</div>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <div class="section-title">정량 요약 (At-a-glance)</div>
+            <table class="edu-table">
+              <tbody>
+                <tr><td style="width:120px;color:var(--ink-mute);font-size:11.5px">박사 취득연도</td><td><strong>${phdYear}</strong> (${yearsSincePhD}년 경과)</td></tr>
+                <tr><td style="color:var(--ink-mute);font-size:11.5px">박사 GPA</td><td><span class="gpa-display">${c.edu[0].gpa.split('/')[0]}<span class="scale">/${c.edu[0].gpa.split('/')[1]}</span></span></td></tr>
+                <tr><td style="color:var(--ink-mute);font-size:11.5px">해외 경험</td><td>${[...c.edu,...c.career].some(e=>/USA|UK|France|🇺🇸|🇬🇧|🇫🇷|Cambridge|UCLA|UIUC|ERCOT|Terasaki|Paris/.test(JSON.stringify(e)))?'있음':'없음'}</td></tr>
+                <tr><td style="color:var(--ink-mute);font-size:11.5px">산업체 경력</td><td>${c.career.some(e=>/한전|KEPCO|LG|삼성|SDI|기업|산업체|ERCOT/.test(e.role))?'있음':'없음'}</td></tr>
+                <tr><td style="color:var(--ink-mute);font-size:11.5px">분야 분류</td><td><strong style="color:${fieldColor}">${fieldData.label}</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderList(){
+  const q = searchEl.value.trim().toLowerCase();
+  let arr = candidates.filter(c=>{
+    if(!activeFields.has(c.field)) return false;
+    if(q){
+      const hay = (c.name + ' ' + c.nameEn + ' ' + c.keywords.join(' ') + ' ' + c.fieldDetail).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  arr.sort((a,b)=>{
+    let va,vb;
+    if(currentSort==='id'){ va=a.id; vb=b.id; }
+    else if(currentSort==='age'){ va=a.age; vb=b.age; }
+    else if(currentSort==='phd'){
+      va=parseInt(a.edu[0].period.match(/(\d{4})/g).pop());
+      vb=parseInt(b.edu[0].period.match(/(\d{4})/g).pop());
+    }
+    else if(currentSort==='papers'){ va=a.papers.sci; vb=b.papers.sci; }
+    else if(currentSort==='q1'){ va=a.papers.q1; vb=b.papers.q1; }
+    if(typeof va==='string') return sortDirection*(va<vb?-1:va>vb?1:0);
+    return sortDirection*(va-vb);
+  });
+  listEl.innerHTML = arr.map(buildCard).join('');
+  if(arr.length===0){
+    listEl.innerHTML = `<div style="padding:48px;text-align:center;color:var(--ink-mute);font-style:italic;font-family:'Fraunces',serif">조건에 맞는 지원자가 없습니다.</div>`;
+  }
+  if(allExpanded){
+    document.querySelectorAll('.candidate-card').forEach(c=>c.classList.add('expanded'));
+  }
+}
+
+function toggleCard(id){
+  const card = document.querySelector(`[data-id="${id}"]`);
+  if(card) card.classList.toggle('expanded');
+}
+window.toggleCard = toggleCard;
+
+// 정렬 버튼
+sortBtnsEl.querySelectorAll('.sort-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const newSort = btn.dataset.sort;
+    if(currentSort===newSort){
+      sortDirection *= -1;
+    } else {
+      currentSort = newSort;
+      sortDirection = (newSort==='papers'||newSort==='q1') ? -1 : 1; // 논문수·Q1은 기본 내림차순
+    }
+    sortBtnsEl.querySelectorAll('.sort-btn').forEach(b=>{
+      b.classList.toggle('active', b===btn);
+      const arrow = b.querySelector('.arrow');
+      if(arrow) arrow.remove();
+    });
+    const arrowSpan = document.createElement('span');
+    arrowSpan.className='arrow';
+    arrowSpan.textContent = sortDirection===1 ? '↑' : '↓';
+    btn.appendChild(arrowSpan);
+    renderList();
+    renderCharts();
+  });
+});
+
+// 검색
+searchEl.addEventListener('input',renderList);
+
+// 모두 펼치기 / 접기
+expandAllBtn.addEventListener('click',()=>{
+  allExpanded = !allExpanded;
+  expandAllBtn.textContent = allExpanded ? '모두 접기' : '모두 펼치기';
+  document.querySelectorAll('.candidate-card').forEach(c=>{
+    if(allExpanded) c.classList.add('expanded');
+    else c.classList.remove('expanded');
+  });
+});
+
+// ============ 비교 차트 ============
+function renderCharts(){
+  // Q1 논문수 (가장 중요한 지표)
+  const sortedByQ1 = [...candidates].sort((a,b)=>b.papers.q1-a.papers.q1);
+  const maxQ1 = Math.max(...candidates.map(c=>c.papers.q1)) || 1;
+  document.getElementById('chartQ1').innerHTML = sortedByQ1.map(c=>{
+    const w = (c.papers.q1/maxQ1*100).toFixed(1);
+    return `
+    <div class="bar-row" style="--field-color:var(--q1)">
+      <span class="barname">${c.name} <span style="color:var(--ink-mute);font-size:10px">(${c.id.slice(-3)})</span></span>
+      <div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div>
+      <span class="barval">${c.papers.q1}</span>
+    </div>`;
+  }).join('');
+
+  // 등급별 적층 분포 차트
+  const sortedByTotal = [...candidates].sort((a,b)=>(b.papers.q1*4+b.papers.q2*2+b.papers.q3+b.papers.scopusKci*0.5)-(a.papers.q1*4+a.papers.q2*2+a.papers.q3+a.papers.scopusKci*0.5));
+  const maxStack = Math.max(...candidates.map(c=>c.papers.q1+c.papers.q2+c.papers.q3+c.papers.scopusKci));
+  document.getElementById('chartDist').innerHTML = `
+    <div style="display:flex;gap:14px;font-size:10.5px;margin-bottom:10px;font-family:'JetBrains Mono',monospace;color:var(--ink-mute);flex-wrap:wrap">
+      <span><span style="display:inline-block;width:9px;height:9px;background:var(--q1);vertical-align:middle;margin-right:4px"></span>Q1</span>
+      <span><span style="display:inline-block;width:9px;height:9px;background:var(--q2);vertical-align:middle;margin-right:4px"></span>Q2</span>
+      <span><span style="display:inline-block;width:9px;height:9px;background:var(--q3);vertical-align:middle;margin-right:4px"></span>Q3</span>
+      <span><span style="display:inline-block;width:9px;height:9px;background:var(--scopus);vertical-align:middle;margin-right:4px"></span>Scopus·KCI</span>
+    </div>
+  ` + sortedByTotal.map(c=>{
+    const tot = c.papers.q1+c.papers.q2+c.papers.q3+c.papers.scopusKci;
+    const w = (tot/maxStack*100).toFixed(1);
+    const seg = (n)=>tot>0?(n/tot*w).toFixed(2):0;
+    return `
+    <div class="bar-row">
+      <span class="barname">${c.name} <span style="color:var(--ink-mute);font-size:10px">(${c.id.slice(-3)})</span></span>
+      <div class="bar-track" style="display:flex;background:var(--paper-2)">
+        <div style="height:100%;background:var(--q1);width:${seg(c.papers.q1)}%" title="Q1: ${c.papers.q1}"></div>
+        <div style="height:100%;background:var(--q2);width:${seg(c.papers.q2)}%" title="Q2: ${c.papers.q2}"></div>
+        <div style="height:100%;background:var(--q3);width:${seg(c.papers.q3)}%" title="Q3+: ${c.papers.q3}"></div>
+        <div style="height:100%;background:var(--scopus);width:${seg(c.papers.scopusKci)}%" title="Scopus·KCI: ${c.papers.scopusKci}"></div>
+      </div>
+      <span class="barval">${tot}</span>
+    </div>`;
+  }).join('');
+
+  // 총 SCI 논문수
+  const sortedByPapers = [...candidates].sort((a,b)=>b.papers.sci-a.papers.sci);
+  const maxPapers = sortedByPapers[0].papers.sci;
+  document.getElementById('chartPapers').innerHTML = sortedByPapers.map(c=>{
+    const w = (c.papers.sci/maxPapers*100).toFixed(1);
+    return `
+    <div class="bar-row" style="--field-color:${FIELDS[c.field].color}">
+      <span class="barname">${c.name} <span style="color:var(--ink-mute);font-size:10px">(${c.id.slice(-3)})</span></span>
+      <div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div>
+      <span class="barval">${c.papers.sci}</span>
+    </div>`;
+  }).join('');
+
+  // 박사후 경력 연수
+  const careerData = candidates.map(c=>({
+    name:c.name, id:c.id, field:c.field,
+    yrs: 2026 - parseInt(c.edu[0].period.match(/(\d{4})/g).pop())
+  })).sort((a,b)=>b.yrs-a.yrs);
+  const maxYrs = careerData[0].yrs;
+  document.getElementById('chartCareer').innerHTML = careerData.map(c=>{
+    const w = (c.yrs/maxYrs*100).toFixed(1);
+    return `
+    <div class="bar-row" style="--field-color:${FIELDS[c.field].color}">
+      <span class="barname">${c.name} <span style="color:var(--ink-mute);font-size:10px">(${c.id.slice(-3)})</span></span>
+      <div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div>
+      <span class="barval">${c.yrs}년</span>
+    </div>`;
+  }).join('');
+}
+
+// ============ 인터랙티브 정량분석 ============
+const TIER_WEIGHT = { Top:10, Q1:4, Q2:2, Q3:1, Scopus:0.3 };
+const FA_BONUS = 1.5;
+
+function getFilteredPubs(c, filters){
+  return c.pubs.filter(p=>{
+    if(filters.excludeOAVolume && p.oa==='V') return false;
+    if(filters.firstAuthorOnly && !p.fa) return false;
+    if(filters.topTierOnly && !(p.t==='Top'||p.t==='Q1')) return false;
+    if(filters.recentOnly && p.y<2021) return false;
+    if(filters.excludeKci && p.t==='Scopus') return false;
+    return true;
+  });
+}
+
+function calcScore(pubs){
+  return pubs.reduce((sum,p)=>{
+    const w = TIER_WEIGHT[p.t]||0;
+    return sum + w*(p.fa?FA_BONUS:1);
+  },0);
+}
+
+function getFilters(){
+  return {
+    excludeOAVolume: document.getElementById('excludeOAVolume').checked,
+    firstAuthorOnly: document.getElementById('firstAuthorOnly').checked,
+    topTierOnly: document.getElementById('topTierOnly').checked,
+    recentOnly: document.getElementById('recentOnly').checked,
+    excludeKci: document.getElementById('excludeKci').checked
+  };
+}
+
+function renderQuantAnalysis(){
+  const filters = getFilters();
+  const filterActive = Object.values(filters).some(v=>v);
+
+  // 각 후보별 계산
+  const data = candidates.map(c=>{
+    const allPubs = c.pubs;
+    const filteredPubs = getFilteredPubs(c, filters);
+    const scoreAll = calcScore(allPubs);
+    const scoreFiltered = calcScore(filteredPubs);
+    const oaCounts = {
+      none: allPubs.filter(p=>!p.oa && p.t!=='Scopus').length,
+      P: allPubs.filter(p=>p.oa==='P').length,
+      S: allPubs.filter(p=>p.oa==='S').length,
+      V: allPubs.filter(p=>p.oa==='V').length,
+      Scopus: allPubs.filter(p=>p.t==='Scopus').length
+    };
+    return {
+      c, allPubs, filteredPubs,
+      scoreAll, scoreFiltered,
+      oaCounts,
+      filteredCount: filteredPubs.length,
+      vOACount: allPubs.filter(p=>p.oa==='V').length
+    };
+  });
+
+  // ===== 요약 카드 =====
+  const summary = data.slice().sort((a,b)=>b.scoreFiltered-a.scoreFiltered);
+  document.getElementById('quantSummary').innerHTML = summary.map(d=>{
+    const delta = d.scoreFiltered - d.scoreAll;
+    const deltaDisplay = filterActive ? 
+      (delta < -0.1 ? `<div class="qsum-delta minus">▼ ${Math.abs(delta).toFixed(1)}</div>` : 
+       delta > 0.1 ? `<div class="qsum-delta">▲ ${delta.toFixed(1)}</div>` :
+       `<div class="qsum-delta same">변동 없음</div>`) : '';
+    const fieldColor = FIELDS[d.c.field].color;
+    return `
+    <div class="qsum-card" style="--field-color:${fieldColor}">
+      <div class="qsum-bar"></div>
+      <div class="qsum-name">${d.c.name}</div>
+      <div class="qsum-num score">${d.scoreFiltered.toFixed(1)}</div>
+      <div class="qsum-label">${filterActive?'필터 적용 점수':'가중 점수'}</div>
+      ${deltaDisplay}
+      <div style="font-size:10px;color:var(--ink-mute);margin-top:6px;font-family:'JetBrains Mono',monospace">${d.filteredCount}/${d.allPubs.length}편${d.vOACount>0?` · <span style="color:var(--accent);font-weight:600">⚠V:${d.vOACount}</span>`:''}</div>
+    </div>`;
+  }).join('');
+
+  // ===== 가중 점수 막대 차트 =====
+  const maxScore = Math.max(...data.map(d=>d.scoreFiltered)) || 1;
+  document.getElementById('chartScore').innerHTML = data.slice().sort((a,b)=>b.scoreFiltered-a.scoreFiltered).map(d=>{
+    const w = (d.scoreFiltered/maxScore*100).toFixed(1);
+    return `
+    <div class="bar-row" style="--field-color:var(--q1)">
+      <span class="barname">${d.c.name} <span style="color:var(--ink-mute);font-size:10px">(${d.c.id.slice(-3)})</span></span>
+      <div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div>
+      <span class="barval">${d.scoreFiltered.toFixed(1)}</span>
+    </div>`;
+  }).join('');
+
+  // ===== OA 비율 차트 =====
+  document.getElementById('chartOA').innerHTML = data.slice().sort((a,b)=>b.vOACount-a.vOACount||b.allPubs.length-a.allPubs.length).map(d=>{
+    const tot = d.allPubs.length || 1;
+    const segs = ['none','P','S','V'];
+    const cls = {none:'subscription', P:'premium-oa', S:'standard-oa', V:'volume-oa'};
+    const scopusN = d.oaCounts.Scopus;
+    // Scopus·KCI는 구독제로 분류 (한국 학회지)
+    const subN = d.oaCounts.none + scopusN;
+    const totalForBar = subN + d.oaCounts.P + d.oaCounts.S + d.oaCounts.V;
+    const realTot = totalForBar || 1;
+    const w = (n)=>(n/realTot*100).toFixed(1);
+    const vPct = (d.vOACount/realTot*100).toFixed(0);
+    return `
+    <div class="oa-mini">
+      <span class="oa-name">${d.c.name}</span>
+      <div class="oa-bar" title="총 ${realTot}편">
+        <div class="oa-seg subscription" style="width:${w(subN)}%" title="구독제+Scopus: ${subN}"></div>
+        <div class="oa-seg premium-oa" style="width:${w(d.oaCounts.P)}%" title="Premium OA: ${d.oaCounts.P}"></div>
+        <div class="oa-seg standard-oa" style="width:${w(d.oaCounts.S)}%" title="Standard OA: ${d.oaCounts.S}"></div>
+        <div class="oa-seg volume-oa" style="width:${w(d.vOACount)}%" title="Volume OA: ${d.vOACount}"></div>
+      </div>
+      <span class="oa-pct" style="${d.vOACount>0?'color:var(--accent);font-weight:700':''}">${d.vOACount>0?'⚠ '+vPct+'%':'—'}</span>
+    </div>`;
+  }).join('');
+}
+
+// ============ 저자별 논문 리스트 표 ============
+let pubTableSort = {key:'y', dir:-1};
+
+function renderPubTable(){
+  const authorFilter = document.getElementById('pubFilterAuthor').value;
+  const tierFilter = document.getElementById('pubFilterTier').value;
+  const oaFilter = document.getElementById('pubFilterOA').value;
+  const faFilter = document.getElementById('pubFilterFA').value;
+
+  // 모든 논문 평탄화
+  let allPubs = [];
+  candidates.forEach(c=>{
+    c.pubs.forEach(p=>{
+      allPubs.push({
+        author: c.name,
+        authorId: c.id,
+        field: c.field,
+        ...p
+      });
+    });
+  });
+
+  // 필터링
+  allPubs = allPubs.filter(p=>{
+    if(authorFilter && p.authorId!==authorFilter) return false;
+    if(tierFilter && p.t!==tierFilter) return false;
+    if(oaFilter==='V' && p.oa!=='V') return false;
+    if(oaFilter==='P' && p.oa!=='P') return false;
+    if(oaFilter==='S' && p.oa!=='S') return false;
+    if(oaFilter==='none' && p.oa) return false;
+    if(faFilter==='1' && !p.fa) return false;
+    if(faFilter==='0' && p.fa) return false;
+    return true;
+  });
+
+  // 정렬
+  const tierOrder = {Top:0, Q1:1, Q2:2, Q3:3, Scopus:4};
+  allPubs.sort((a,b)=>{
+    let av = a[pubTableSort.key], bv = b[pubTableSort.key];
+    if(pubTableSort.key==='t'){ av=tierOrder[av]; bv=tierOrder[bv]; }
+    if(pubTableSort.key==='oa'){ av=av||'z'; bv=bv||'z'; }
+    if(pubTableSort.key==='fa'){ av=a.fa?1:0; bv=b.fa?1:0; }
+    if(typeof av==='string') return pubTableSort.dir*(av<bv?-1:av>bv?1:0);
+    return pubTableSort.dir*(av-bv);
+  });
+
+  const tbody = document.querySelector('#pubTable tbody');
+  if(allPubs.length===0){
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:30px;color:var(--ink-mute);font-style:italic;font-family:'Fraunces',serif">조건에 맞는 논문이 없습니다.</td></tr>`;
+  } else {
+    tbody.innerHTML = allPubs.map(p=>{
+      const fieldColor = FIELDS[p.field].color;
+      const oaDisplay = p.oa==='V' ? `<span class="oa-flag oa-V">⚠ Volume</span>` :
+                       p.oa==='P' ? `<span class="oa-flag oa-P">Premium</span>` :
+                       p.oa==='S' ? `<span class="oa-flag oa-S">Standard</span>` :
+                       `<span class="oa-none">구독제</span>`;
+      const tierDisp = p.t==='Top' ? `<span class="tier-badge tier-Top">TOP</span>` : `<span class="tier-badge tier-${p.t}">${p.t}</span>`;
+      return `
+      <tr class="${p.oa==='V'?'oa-volume':''}">
+        <td class="col-author"><span class="field-dot" style="background:${fieldColor}"></span>${p.author}</td>
+        <td class="col-journal">${p.j}</td>
+        <td class="col-year">${p.y}</td>
+        <td class="col-tier">${tierDisp}</td>
+        <td class="col-oa">${oaDisplay}</td>
+        <td class="col-fa">${p.fa?'<span class="fa-mark">1</span>':'<span class="fa-empty">—</span>'}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  document.getElementById('pubCount').textContent = `${allPubs.length}편 표시 (전체 ${candidates.reduce((s,c)=>s+c.pubs.length,0)}편 중)`;
+
+  // 정렬 표시
+  document.querySelectorAll('#pubTable thead th').forEach(th=>{
+    th.classList.toggle('sorted', th.dataset.key===pubTableSort.key);
+    const ind = th.querySelector('.sort-ind');
+    if(th.dataset.key===pubTableSort.key) ind.textContent = pubTableSort.dir===1?'↑':'↓';
+    else ind.textContent='⇅';
+  });
+}
+
+function setupQuantAnalysis(){
+  // 필터 토글 이벤트
+  ['excludeOAVolume','firstAuthorOnly','topTierOnly','recentOnly','excludeKci'].forEach(id=>{
+    document.getElementById(id).addEventListener('change', renderQuantAnalysis);
+  });
+
+  // 표 필터 옵션 채우기
+  const authorSelect = document.getElementById('pubFilterAuthor');
+  candidates.forEach(c=>{
+    const opt = document.createElement('option');
+    opt.value = c.id;
+    opt.textContent = c.name;
+    authorSelect.appendChild(opt);
+  });
+
+  // 표 필터 이벤트
+  ['pubFilterAuthor','pubFilterTier','pubFilterOA','pubFilterFA'].forEach(id=>{
+    document.getElementById(id).addEventListener('change', renderPubTable);
+  });
+
+  // 표 헤더 클릭 정렬
+  document.querySelectorAll('#pubTable thead th').forEach(th=>{
+    th.addEventListener('click',()=>{
+      const k = th.dataset.key;
+      if(pubTableSort.key===k) pubTableSort.dir *= -1;
+      else { pubTableSort.key = k; pubTableSort.dir = (k==='y'||k==='fa')?-1:1; }
+      renderPubTable();
+    });
+  });
+
+  renderQuantAnalysis();
+  renderPubTable();
+}
+
+// ============ 학력·전공 적합도 매트릭스 ============
+function renderEduFitTable(){
+  const tbody = document.getElementById('eduFitTableBody');
+  const FIT_LABEL = {direct:"DIRECT", adjacent:"ADJACENT", convergent:"CONVERGENT"};
+
+  const renderCell = (e)=>{
+    if(!e) return `<td class="empty-cell">—</td>`;
+    const fitCls = e.fit ? `fit-cell-${e.fit}` : '';
+    return `<td class="fit-edu-cell ${fitCls}">
+      <div class="fit-edu-univ">${e.univ}</div>
+      <div class="fit-edu-dept">${e.dept||'—'}${e.deptInferred?'<span class="inferred-mark">추정</span>':''}</div>
+      ${e.fit?`<span class="fit-mark fit-${e.fit}">${FIT_LABEL[e.fit]}</span>`:''}
+    </td>`;
+  };
+
+  tbody.innerHTML = candidates.map(c=>{
+    const fieldColor = FIELDS[c.field].color;
+    const phd = c.edu.find(e=>e.deg==='Ph.D.');
+    const ms = c.edu.find(e=>e.deg==='M.S.');
+    const bs = c.edu.find(e=>e.deg==='학사');
+
+    return `
+    <tr>
+      <td class="fit-name-cell">
+        <strong><span class="fit-name-dot" style="background:${fieldColor}"></span>${c.name}</strong>
+        <div class="fit-name-id">${c.id}</div>
+        <div class="fit-name-id" style="margin-top:6px;color:var(--ink-soft);font-style:italic;font-family:'Fraunces',serif;font-size:11px">${FIELDS[c.field].label}</div>
+      </td>
+      ${renderCell(bs)}
+      ${renderCell(ms)}
+      ${renderCell(phd)}
+      <td class="fit-overall">
+        <span class="fit-mark fit-${c.overallFit}">${FIT_LABEL[c.overallFit]}</span>
+      </td>
+    </tr>`;
+  }).join('');
+
+  // 적합도 통계
+  const directNames = candidates.filter(c=>c.overallFit==='direct').map(c=>c.name);
+  const adjacentNames = candidates.filter(c=>c.overallFit==='adjacent').map(c=>c.name);
+  const convergentNames = candidates.filter(c=>c.overallFit==='convergent').map(c=>c.name);
+  document.getElementById('fitStatsRow').innerHTML = `
+    <div class="fit-stat-cell direct">
+      <div class="fit-stat-num">${directNames.length}</div>
+      <div class="fit-stat-info">
+        <div class="fit-stat-label">DIRECT — 전기공학 직접</div>
+        <div class="fit-stat-names">${directNames.join(' · ')||'—'}</div>
+      </div>
+    </div>
+    <div class="fit-stat-cell adjacent">
+      <div class="fit-stat-num">${adjacentNames.length}</div>
+      <div class="fit-stat-info">
+        <div class="fit-stat-label">ADJACENT — 인접 분야</div>
+        <div class="fit-stat-names">${adjacentNames.join(' · ')||'—'}</div>
+      </div>
+    </div>
+    <div class="fit-stat-cell convergent">
+      <div class="fit-stat-num">${convergentNames.length}</div>
+      <div class="fit-stat-info">
+        <div class="fit-stat-label">CONVERGENT — 융합 분야</div>
+        <div class="fit-stat-names">${convergentNames.join(' · ')||'—'}</div>
+      </div>
+    </div>
+  `;
+}
+
+// ============ 초기화 ============
+renderFieldToggles();
+updateFieldTrigger();
+renderList();
+renderCharts();
+renderEduFitTable();
+setupQuantAnalysis();
+
+// 초기 정렬 화살표
+document.querySelector('.sort-btn.active').appendChild(Object.assign(document.createElement('span'),{className:'arrow',textContent:'↑'}));
+</script>
+
+</body>
+</html>
