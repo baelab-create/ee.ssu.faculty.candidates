@@ -761,7 +761,190 @@ body{
   line-height:1.45;
 }
 
-/* ===== 학력 적합도 (전기공학부) ===== */
+/* ===== 지원자 현황 (At-a-glance Overview) ===== */
+.overview-section{
+  max-width:1400px;
+  margin:28px auto 0;
+  padding:0 32px;
+}
+.overview-title-row{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+.overview-h{
+  font-family:'Fraunces',serif;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+}
+.overview-h em{
+  font-style:italic;
+  color:var(--accent-deep);
+  font-weight:500;
+}
+.overview-sub{
+  font-size:12px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+}
+
+.overview-table{
+  background:#fff;
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.overview-header-row{
+  display:grid;
+  grid-template-columns:240px 1.1fr 1.5fr;
+  background:var(--paper);
+  border-bottom:2px solid var(--line);
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  color:var(--ink-mute);
+}
+.overview-header-row > div{
+  padding:13px 22px;
+}
+.overview-row{
+  display:grid;
+  grid-template-columns:240px 1.1fr 1.5fr;
+  border-bottom:1px solid var(--line-soft);
+  align-items:stretch;
+  transition:background 0.15s;
+  position:relative;
+}
+.overview-row:last-child{border-bottom:none}
+.overview-row:hover{background:var(--paper)}
+
+.overview-tier-cell{
+  padding:20px 22px 20px 26px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  position:relative;
+}
+.overview-tier-cell::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+}
+.overview-row.tier-direct .overview-tier-cell::before{background:var(--fit-direct)}
+.overview-row.tier-broad .overview-tier-cell::before{background:var(--fit-adjacent)}
+.overview-row.tier-non .overview-tier-cell::before{background:var(--accent)}
+
+.overview-status-icon{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+}
+.overview-row.tier-direct .overview-status-icon{background:var(--fit-direct)}
+.overview-row.tier-broad .overview-status-icon{background:var(--fit-adjacent)}
+.overview-row.tier-non .overview-status-icon{background:var(--accent)}
+
+.overview-tier-info{flex:1;min-width:0}
+.overview-tier-name{
+  font-family:'Fraunces',serif;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:-0.015em;
+  line-height:1.15;
+}
+.overview-row.tier-direct .overview-tier-name{color:var(--fit-direct)}
+.overview-row.tier-broad .overview-tier-name{color:var(--fit-adjacent)}
+.overview-row.tier-non .overview-tier-name{color:var(--accent)}
+
+.overview-count{
+  font-size:10px;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--ink-mute);
+  font-weight:700;
+  letter-spacing:0.1em;
+  margin-top:4px;
+  text-transform:uppercase;
+}
+
+.overview-names{
+  padding:20px 22px;
+  font-family:'Fraunces',serif;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:0;
+}
+.overview-names .name-sep{
+  margin:0 8px;
+  color:var(--line);
+  font-weight:400;
+  font-size:14px;
+}
+
+.overview-evidence{
+  padding:20px 22px;
+  font-size:13px;
+  color:var(--ink-soft);
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  line-height:1.45;
+  display:flex;
+  align-items:center;
+}
+.overview-evidence strong{
+  font-weight:600;
+  color:var(--ink);
+  font-style:normal;
+}
+
+/* 하단 캐비엇 */
+.overview-caveat{
+  font-size:11px;
+  color:var(--ink-mute);
+  margin-top:10px;
+  padding:8px 14px;
+  background:var(--paper-2);
+  border-left:2px solid var(--line);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.01em;
+  line-height:1.5;
+}
+
+@media (max-width:900px){
+  .overview-header-row,
+  .overview-row{
+    grid-template-columns:1fr;
+  }
+  .overview-header-row > div:not(:first-child){display:none}
+  .overview-header-row > div:first-child{padding:10px 18px;font-size:9.5px}
+  .overview-tier-cell{padding:14px 18px 6px 22px}
+  .overview-names{padding:4px 22px;font-size:14.5px}
+  .overview-evidence{padding:4px 22px 16px;font-size:12px}
+}
+
+@media (max-width:768px){
+  .overview-section{padding:0 18px}
+  .overview-h{font-size:18px}
+}
 .fit-mark{
   display:inline-block;
   font-size:9px;
@@ -803,6 +986,157 @@ body{
   display:inline-flex;
   align-items:center;
   gap:5px;
+}
+
+/* ===== 학력 및 현재 소속 요약 섹션 ===== */
+.simple-edu-section{
+  max-width:1400px;
+  margin:24px auto 0;
+  padding:0 32px;
+}
+.simple-edu-table-wrapper{
+  overflow-x:auto;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.simple-edu-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+  min-width:920px;
+}
+.simple-edu-table thead th{
+  background:var(--paper);
+  text-align:left;
+  padding:13px 16px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--ink-mute);
+  font-weight:700;
+  border-bottom:2px solid var(--line);
+  white-space:nowrap;
+}
+.simple-edu-table tbody tr{
+  border-bottom:1px solid var(--line-soft);
+}
+.simple-edu-table tbody tr:last-child{border-bottom:none}
+.simple-edu-table tbody tr:hover{background:var(--paper)}
+.simple-edu-table tbody tr.insider-row{background:rgba(168,52,31,0.04)}
+.simple-edu-table tbody tr.insider-row:hover{background:rgba(168,52,31,0.07)}
+.simple-edu-table td{
+  padding:14px 16px;
+  vertical-align:top;
+  border-right:1px solid var(--line-soft);
+}
+.simple-edu-table td:last-child{border-right:none}
+.simple-edu-table .se-name-cell{
+  background:var(--paper);
+  width:140px;
+}
+.simple-edu-table .se-name-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:-0.015em;
+}
+.simple-edu-table .se-name-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.simple-edu-table .se-name-id{
+  font-size:10px;
+  color:var(--ink-mute);
+  font-family:'JetBrains Mono',monospace;
+  margin-top:3px;
+  letter-spacing:0.02em;
+}
+.simple-edu-table .se-school-info{
+  margin-bottom:6px;
+}
+.simple-edu-table .se-school-info:last-child{margin-bottom:0}
+.simple-edu-table .se-school-info.dual{
+  padding-top:6px;
+  margin-top:6px;
+  border-top:1px dashed var(--line);
+}
+.simple-edu-table .se-school-name{
+  font-weight:600;
+  color:var(--ink);
+  font-size:12.5px;
+  line-height:1.3;
+  margin-bottom:2px;
+}
+.simple-edu-table .se-dept-name{
+  font-size:11px;
+  color:var(--ink-mute);
+  font-style:italic;
+  font-family:'Fraunces',serif;
+  line-height:1.3;
+}
+.simple-edu-table .se-integrated{
+  display:inline-block;
+  font-size:9px;
+  background:var(--paper-2);
+  padding:1px 5px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:600;
+  color:var(--ink-soft);
+  letter-spacing:0.04em;
+  margin-top:3px;
+  border:1px solid var(--line-soft);
+}
+.simple-edu-table .se-empty{
+  color:var(--line);
+  font-size:18px;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+}
+.simple-edu-table .se-position-pill{
+  display:inline-block;
+  font-size:9.5px;
+  padding:2px 7px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  letter-spacing:0.05em;
+  margin-top:5px;
+}
+.simple-edu-table .se-position-pill.permanent{
+  background:var(--fit-direct);
+  color:#fff;
+}
+.simple-edu-table .se-position-pill.contract{
+  background:var(--ink-mute);
+  color:#fff;
+}
+.simple-edu-table .se-insider-warning{
+  display:block;
+  margin-top:8px;
+  padding:5px 8px;
+  background:rgba(168,52,31,0.1);
+  color:var(--accent-deep);
+  font-size:10px;
+  font-weight:700;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.02em;
+  border-left:2px solid var(--accent);
+  line-height:1.4;
+}
+
+@media (max-width:768px){
+  .simple-edu-section{padding:0 18px}
+  .simple-edu-table{min-width:780px;font-size:11.5px}
+  .simple-edu-table .se-name-cell{width:100px}
+  .simple-edu-table .se-name-row{font-size:13px}
+  .simple-edu-table .se-school-name{font-size:11.5px}
+  .simple-edu-table .se-dept-name{font-size:10.5px}
+  .simple-edu-table td{padding:10px 10px}
 }
 
 /* 학력 적합도 매트릭스 섹션 */
@@ -1694,6 +2028,85 @@ body{
   </div>
 </header>
 
+<!-- 지원자 현황 (At-a-Glance Overview) -->
+<section class="overview-section">
+  <div class="overview-title-row">
+    <h2 class="overview-h">지원자 <em>현황</em></h2>
+    <span class="overview-sub">전기전자제어 적합도 요약 — Strategic At-a-glance</span>
+  </div>
+
+  <div class="overview-table">
+    <div class="overview-header-row">
+      <div>분류</div>
+      <div>후보</div>
+      <div>핵심 근거</div>
+    </div>
+
+    <div class="overview-row tier-direct">
+      <div class="overview-tier-cell">
+        <span class="overview-status-icon">✓</span>
+        <div class="overview-tier-info">
+          <div class="overview-tier-name">전기전자제어 정통</div>
+          <div class="overview-count">DIRECT · 3명</div>
+        </div>
+      </div>
+      <div class="overview-names">이한표<span class="name-sep">·</span>서경식<span class="name-sep">·</span>문원식</div>
+      <div class="overview-evidence">학사–박사 일관 <strong>ECE / 전기공학과</strong></div>
+    </div>
+
+    <div class="overview-row tier-broad">
+      <div class="overview-tier-cell">
+        <span class="overview-status-icon">●</span>
+        <div class="overview-tier-info">
+          <div class="overview-tier-name">전자공학 (광의)</div>
+          <div class="overview-count">ADJACENT · 1명</div>
+        </div>
+      </div>
+      <div class="overview-names">이용주</div>
+      <div class="overview-evidence">박사 학과 <strong>"전자공학·광전자공학"</strong>, CMOS 회로 연구</div>
+    </div>
+
+    <div class="overview-row tier-non">
+      <div class="overview-tier-cell">
+        <span class="overview-status-icon">!</span>
+        <div class="overview-tier-info">
+          <div class="overview-tier-name">비-전기전자제어</div>
+          <div class="overview-count">DIVERGENT · 3명</div>
+        </div>
+      </div>
+      <div class="overview-names">김웅<span class="name-sep">·</span>이원형<span class="name-sep">·</span>어정선</div>
+      <div class="overview-evidence"><strong>융합학과 · 물리학 · 바이오</strong> 트랙</div>
+    </div>
+  </div>
+
+  <div class="overview-caveat">
+    ※ 본 분류는 학과 정체성을 정통 전기공학으로 강화할 경우의 1차 스크리닝 기준입니다 — <strong>차세대 융합 영역 확장 전략</strong>을 채택할 경우 ADJACENT/DIVERGENT 후보(어정선 ACS Nano 1저자, 이원형 Adv. Mat. ×2, 김웅 Science Robotics)도 강력한 후보가 됩니다. 채용 방향성 합의 후 본격 심사 권장.
+  </div>
+</section>
+
+<!-- 학력 및 현재 소속 요약 -->
+<section class="simple-edu-section">
+  <div class="overview-title-row">
+    <h2 class="overview-h">학력 및 <em>현재 소속</em></h2>
+    <span class="overview-sub">Education History &amp; Current Affiliation Summary</span>
+  </div>
+
+  <div class="simple-edu-table-wrapper">
+    <table class="simple-edu-table">
+      <thead>
+        <tr>
+          <th>후보자</th>
+          <th>학사</th>
+          <th>석사</th>
+          <th>박사</th>
+          <th>현재 소속</th>
+        </tr>
+      </thead>
+      <tbody id="simpleEduTableBody"></tbody>
+    </table>
+  </div>
+</section>
+
 <!-- 요약 통계 -->
 <section class="stats-row">
   <div class="stat-cell">
@@ -1803,6 +2216,10 @@ body{
     <span><span class="fit-mark fit-direct">DIRECT</span> 전기·전자·컴퓨터공학 직접 관련</span>
     <span><span class="fit-mark fit-adjacent">ADJACENT</span> 광전자·반도체·물리·제어 등 인접</span>
     <span><span class="fit-mark fit-convergent">CONVERGENT</span> 화학·생체·소재 등 융합</span>
+  </div>
+
+  <div style="font-size:11.5px;color:var(--accent-deep);margin-bottom:14px;padding:8px 14px;background:rgba(168,52,31,0.05);border-left:3px solid var(--accent);font-family:'JetBrains Mono',monospace;letter-spacing:0.01em;line-height:1.5">
+    ⚠ <strong>「추정」 표기 안내</strong> — 이력서 PDF에 명시되지 않은 학교명은 첨부 파일명·수상 이력 등 간접 단서로 추정한 결과입니다 (예: 이한표 = (CAU)·(Yonsei) 첨부 파일 기반 / 어정선·김웅 = KU Achievement Award 기반). <strong>최종 평가 전 후보자에게 직접 확인이 필요</strong>합니다.
   </div>
 
   <div class="edu-fit-table-wrapper">
@@ -1956,11 +2373,13 @@ const candidates = [
     fieldDetail:"AI 기반 스마트미터 분석 및 분산에너지자원 통합",
     keywords:["AMI","스마트미터","DER","머신러닝","수요반응"],
     edu:[
-      {deg:"Ph.D.", univ:"North Carolina State University", dept:"Electrical & Computer Engineering", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2020.08–2024.05", thesis:"Machine Learning Applications for Smart Meter Data Analysis", advisor:"Ning Lu", gpa:"4.00/4.00"},
-      {deg:"M.S.", univ:"University of Michigan", dept:"Electrical & Computer Engineering", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2018.09–2020.05", thesis:"Generation Scheduling to Limit PM2.5 Emissions and Dispersion", advisor:"Johanna Mathieu", gpa:"3.60/4.00"},
-      {deg:"학사", univ:"국내 대학", dept:"전기공학 (한전 입사 이력 기반 추정)", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2001–2006", thesis:"", gpa:"3.65/4.30"}
+      {deg:"Ph.D.", univ:"North Carolina State University", univInferred:false, dept:"Computer Science (정규)", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2020.08–2024.05", thesis:"Machine Learning Applications for Smart Meter Data Analysis", advisor:"Ning Lu", gpa:"4.00/4.00"},
+      {deg:"M.S.", univ:"University of Michigan", univInferred:false, dept:"Computer Science (정규)", deptInferred:false, fit:"direct", country:"🇺🇸 USA", period:"2018.09–2020.05", thesis:"Generation Scheduling to Limit PM2.5 Emissions and Dispersion", advisor:"Johanna Mathieu", gpa:"3.60/4.00"},
+      {deg:"학사", univ:"중앙대학교 서울캠퍼스 (Chung-Ang Univ.)", univInferred:false, dept:"전기전자공학부", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2006.03–2008.02", thesis:"", gpa:"3.65/4.30"},
+      {deg:"학사", univ:"연세대학교 (Yonsei University)", univInferred:false, dept:"전기전자공학부", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2001.03–2006.02", thesis:"", gpa:"3.89/4.50"}
     ],
     overallFit:"direct",
+    currentRole:{institution:"홍익대학교 세종캠퍼스", position:"조교수", type:"정규직"},
     career:[
       {period:"2024.09–현재", role:"ERCOT (Electric Reliability Council of Texas)", desc:"전력계통 신뢰도 운영, 보조서비스, AI 분석", current:true},
       {period:"2024.01–2024.08", role:"ERCOT — 보조서비스", desc:"Inertia 등 신뢰도 자원 평가 (박사 직후)"},
@@ -2002,11 +2421,12 @@ const candidates = [
     fieldDetail:"E.P.I. 철학 기반 Physics-driven AI 전기·자기 시스템 설계",
     keywords:["초전도","양자컴퓨팅","MRI","PINN","민감도해석"],
     edu:[
-      {deg:"Ph.D.", univ:"국내 대학교", dept:"전기공학과 (전기방전·다물리 시스템)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2015.03–2020.02", thesis:"Multi-Physics Numerical Analysis and Optimal Design of Electrical Discharge System", gpa:"4.11/4.50"},
-      {deg:"M.S.", univ:"국내 대학교", dept:"전기공학과 (BLDC 모터)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2013.03–2015.02", thesis:"BLDC 관련 연구", gpa:"4.27/4.50"},
-      {deg:"학사", univ:"국내 대학교", dept:"전기공학과 추정", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2006–2013", gpa:"3.57/4.50"}
+      {deg:"Ph.D.", univ:"성균관대학교 (Sungkyunkwan University)", univInferred:false, dept:"전기전자컴퓨터공학과", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2015.03–2020.02", thesis:"Multi-Physics Numerical Analysis and Optimal Design of Electrical Discharge System", gpa:"4.11/4.50"},
+      {deg:"M.S.", univ:"성균관대학교", univInferred:false, dept:"전기전자컴퓨터공학과", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2013.03–2015.02", thesis:"BLDC 관련 연구", gpa:"4.27/4.50"},
+      {deg:"학사", univ:"성균관대학교", univInferred:false, dept:"전기전자컴퓨터공학과", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2006–2013", gpa:"3.57/4.50"}
     ],
     overallFit:"direct",
+    currentRole:{institution:"성균관대학교", position:"연구교수", type:"계약직"},
     career:[
       {period:"2023.09–현재", role:"연구교수 (국내)", desc:"전자기·초전도 시스템 최적설계, 양자회로 민감도해석", current:true},
       {period:"2022.03–2023.08", role:"연구원", desc:""},
@@ -2051,11 +2471,12 @@ const candidates = [
     fieldDetail:"유기 트랜지스터·CMOS·전자피부 통합 바이오일렉트로닉스",
     keywords:["유기CMOS","전자피부","유기태양전지","의료센서","AI헬스케어"],
     edu:[
-      {deg:"Ph.D.", univ:"국내 + Université Paris Cité (공동)", dept:"전자공학·광전자공학 (집적회로·바이오일렉트로닉스)", deptInferred:false, fit:"adjacent", country:"🇰🇷·🇫🇷", period:"2022.03–2026.02", thesis:"Flexible Optoelectronic Systems for Integrated Circuits and Bioelectronics", advisor:"Philippe Lang (Paris Cité)", gpa:"4.50/4.50"},
-      {deg:"M.S.", univ:"국내 대학교", dept:"전자공학 (유기 광다이오드)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2020.03–2022.02", thesis:"Self-powered Organic Photodiode for Near-Infrared Sensing", gpa:"4.50/4.50"},
-      {deg:"학사", univ:"국내 대학교", dept:"전자·재료공학 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2012–2019", gpa:"3.57/4.50"}
+      {deg:"Ph.D.", univ:"서울시립대학교 (University of Seoul)", univInferred:false, dept:"전기전자컴퓨터공학과 — 광전자·바이오일렉트로닉스 트랙", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2022.03–2026.02", thesis:"Flexible Optoelectronic Systems for Integrated Circuits and Bioelectronics", advisor:"Philippe Lang (Paris Cité 협력)", gpa:"4.50/4.50"},
+      {deg:"M.S.", univ:"서울시립대학교", univInferred:false, dept:"전기전자컴퓨터공학과", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2020.03–2022.02", thesis:"Self-powered Organic Photodiode for Near-Infrared Sensing", gpa:"4.50/4.50"},
+      {deg:"학사", univ:"경상대학교 (Gyeongsang Nat'l Univ.)", univInferred:false, dept:"전기공학과", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2012–2019", gpa:"3.57/4.50"}
     ],
     overallFit:"adjacent",
+    currentRole:{institution:"서울시립대학교", position:"박사후연구원", type:"계약직"},
     career:[
       {period:"2026.03–현재", role:"박사후연구원 — UCLA (CMOS 의료기기)", desc:"미국, 유기 CMOS 기반 웨어러블 의료기기", current:true},
       {period:"2022.07–2023.03", role:"Terasaki Institute for Biomedical Innovation 인턴", desc:"🇺🇸 LA, 의료용 광전자 시스템"},
@@ -2136,11 +2557,12 @@ const candidates = [
     fieldDetail:"1D/2D 분자 헤테로정션 기반 뉴로모픽·인메모리 컴퓨팅",
     keywords:["분자스케일소자","뉴로모픽","리저버컴퓨팅","인메모리","AFM"],
     edu:[
-      {deg:"Ph.D.", univ:"KU-KIST 융합대학원", dept:"NBIT (나노바이오기술 융합) — 분자전자·뉴로모픽", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2019.09–2025.02", thesis:"Mixed-dimensional molecular functional heterojunction via 1D/2D interfacial band engineering", gpa:"4.47/4.50"},
-      {deg:"M.S.", univ:"국내 대학교", dept:"분자·나노전자 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2017.03–2019.02", gpa:"3.88/4.50"},
-      {deg:"학사", univ:"국내 대학교", dept:"화학·소재공학 추정", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"2014–2017", gpa:"4.39/4.50"}
+      {deg:"Ph.D. (석박 통합)", univ:"고려대학교 · KU-KIST 융합대학원", univInferred:false, dept:"NBIT (나노바이오기술 융합) — 분자전자·뉴로모픽", deptInferred:false, fit:"convergent", country:"🇰🇷 KOR", period:"2017.03–2025.02 (석박 통합)", thesis:"Mixed-dimensional molecular functional heterojunction via 1D/2D interfacial band engineering", gpa:"4.47/4.50"},
+      {deg:"학사", univ:"동국대학교 (Dongguk University)", univInferred:false, dept:"전자전기공학부", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"학사 2", thesis:"", gpa:""},
+      {deg:"학사", univ:"한국외국어대학교 (HUFS)", univInferred:false, dept:"정보통신공학과", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2014.03–2017.02", thesis:"", gpa:"4.39/4.50"}
     ],
-    overallFit:"adjacent",
+    overallFit:"convergent",
+    currentRole:{institution:"University of Cambridge 🇬🇧", position:"Postdoctoral Researcher", type:"계약직"},
     career:[
       {period:"2025.07–현재", role:"University of Cambridge — Postdoctoral Research", desc:"🇬🇧 분자전자 시스템, AFM 기반 단일분자 측정", current:true},
       {period:"2025.03–2025.06", role:"Research Professor (국내)", desc:""},
@@ -2184,11 +2606,12 @@ const candidates = [
     fieldDetail:"MVDC·배전계통 운영전략 및 분산자원 수용용량 분석",
     keywords:["배전계통","MVDC","DER","호스팅용량","Voltage Margin"],
     edu:[
-      {deg:"Ph.D.", univ:"국내 대학교", dept:"전기공학과 (전력계통·배전)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2011.09–2016.02", gpa:"4.17/4.50"},
-      {deg:"M.S.", univ:"국내 대학교", dept:"전기공학과 (전력계통)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2009.09–2011.08", gpa:"4.38/4.50"},
-      {deg:"학사", univ:"국내 대학교", dept:"전기공학과", deptInferred:true, fit:"direct", country:"🇰🇷 KOR", period:"2001.03–2009.08", gpa:"3.74/4.50"}
+      {deg:"Ph.D.", univ:"숭실대학교 (Soongsil University)", univInferred:false, dept:"전기공학 (전력계통·배전)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2011.09–2016.02", gpa:"4.17/4.50"},
+      {deg:"M.S.", univ:"숭실대학교", univInferred:false, dept:"전기공학 (전력계통)", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2009.09–2011.08", gpa:"4.38/4.50"},
+      {deg:"학사", univ:"숭실대학교", univInferred:false, dept:"전기공학", deptInferred:false, fit:"direct", country:"🇰🇷 KOR", period:"2001.03–2009.08", gpa:"3.74/4.50"}
     ],
     overallFit:"direct",
+    currentRole:{institution:"숭실대학교", position:"조교수", type:"계약직", insider:true, note:"⚠ 본 임용 공고 진행 학교 — 내부 후보자"},
     career:[
       {period:"2019.09–현재", role:"연구교수 (국내)", desc:"배전·MVDC·DER 운영 연구, 학부 강의", current:true},
       {period:"2016.04–2019.08", role:"LG (산업체)", desc:"전력계통 관련 산업 R&D"}
@@ -2237,10 +2660,12 @@ const candidates = [
     fieldDetail:"Ionovoltaics — 이온/반도체 계면 상호작용 기반 에너지 하베스팅",
     keywords:["Ionovoltaics","에너지하베스팅","자가발전센서","산화물반도체","SAM"],
     edu:[
-      {deg:"Ph.D.", univ:"국내 대학교", dept:"반도체·이온전자 (Ionovoltaics 융합)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2017.09–2023.08", thesis:"Investigation of ion-charge interactions via semiconductor analysis: a fundamental study of ionovoltaics", gpa:"4.13/4.50"},
-      {deg:"학사", univ:"Pennsylvania State University", dept:"Physics (Mathematics minor)", deptInferred:false, fit:"adjacent", country:"🇺🇸 USA", period:"2008.08–2016.05", thesis:"Physics, Mathematics(minor)", gpa:"3.14/4.50"}
+      {deg:"Ph.D. (석박 통합)", univ:"서울대학교 (Seoul National University)", univInferred:false, dept:"학과 미명시 (Ionovoltaics·반도체-이온계면 융합)", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"2017.09–2023.08 (석박 통합)", thesis:"Investigation of ion-charge interactions via semiconductor analysis: a fundamental study of ionovoltaics", gpa:"4.13/4.50"},
+      {deg:"M.S.", univ:"서울대학교 (석박 통합과정)", univInferred:false, dept:"학과 미명시", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"통합과정", thesis:"", gpa:""},
+      {deg:"학사", univ:"Pennsylvania State University", univInferred:false, dept:"Physics (Mathematics minor)", deptInferred:false, fit:"adjacent", country:"🇺🇸 USA", period:"2008.08–2016.05", thesis:"Physics, Mathematics(minor)", gpa:"3.14/4.50"}
     ],
-    overallFit:"adjacent",
+    overallFit:"convergent",
+    currentRole:{institution:"삼성SDI", position:"책임연구원", type:"정규직"},
     career:[
       {period:"2023.09–현재", role:"삼성SDI", desc:"산업체 연구원 — 차세대 에너지/소재 R&D", current:true}
     ],
@@ -2301,10 +2726,12 @@ const candidates = [
     fieldDetail:"나노바이오센서 (SERS) 및 NMJ 기반 광유전 바이오로봇",
     keywords:["SERS","바이오로봇","광유전학","NMJ","나노센서"],
     edu:[
-      {deg:"Ph.D.", univ:"국내 대학교", dept:"기계·전자 융합 (나노바이오센서·SERS)", deptInferred:false, fit:"adjacent", country:"🇰🇷 KOR", period:"2015.03–2021.08", thesis:"Detection of Toxicants using Nanostructure via Electrical and Optical Sensors", gpa:"4.22/4.50"},
-      {deg:"학사", univ:"국내 대학교", dept:"기계·전자공학 추정", deptInferred:true, fit:"adjacent", country:"🇰🇷 KOR", period:"2009.03–2015.02", gpa:"3.78/4.50"}
+      {deg:"Ph.D.", univ:"고려대학교 세종캠퍼스 (Korea Univ. Sejong)", univInferred:false, dept:"학과 미명시 (나노바이오센서·SERS)", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"2015.03–2021.08", thesis:"Detection of Toxicants using Nanostructure via Electrical and Optical Sensors", gpa:"4.22/4.50"},
+      {deg:"M.S.", univ:"고려대학교 세종캠퍼스", univInferred:false, dept:"학과 미명시", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"기간 미명시", thesis:"", gpa:""},
+      {deg:"학사", univ:"고려대학교 세종캠퍼스", univInferred:false, dept:"학과 미명시", deptInferred:true, fit:"convergent", country:"🇰🇷 KOR", period:"2009.03–2015.02", thesis:"", gpa:"3.78/4.50"}
     ],
-    overallFit:"adjacent",
+    overallFit:"convergent",
+    currentRole:{institution:"국립한국교통대학교", position:"연구원", type:"계약직"},
     career:[
       {period:"2026.02–현재", role:"국내 연구원", desc:"", current:true},
       {period:"2023.04–2025.12", role:"University of Illinois at Urbana-Champaign — Postdoctoral", desc:"🇺🇸 Holonyak Micro&Nanotechnology Lab, NMJ·바이오로봇"},
@@ -2494,7 +2921,7 @@ function buildCard(c){
                 <tr>
                   <td><span class="deg">${e.deg}</span></td>
                   <td>
-                    <div class="univ">${e.univ}${e.country?` <span style="color:var(--ink-mute);font-weight:400">· ${e.country}</span>`:''}</div>
+                    <div class="univ">${e.univ}${e.univInferred?'<span class="inferred-mark">추정</span>':''}${e.country?` <span style="color:var(--ink-mute);font-weight:400">· ${e.country}</span>`:''}</div>
                     ${e.dept?`<div class="dept-line">
                       <span class="dept-text">${e.dept}${e.deptInferred?'<span class="inferred-mark">추정</span>':''}</span>
                       ${e.fit?`<span class="fit-mark fit-${e.fit}">${e.fit.toUpperCase()}</span>`:''}
@@ -2973,21 +3400,40 @@ function renderEduFitTable(){
   const tbody = document.getElementById('eduFitTableBody');
   const FIT_LABEL = {direct:"DIRECT", adjacent:"ADJACENT", convergent:"CONVERGENT"};
 
-  const renderCell = (e)=>{
-    if(!e) return `<td class="empty-cell">—</td>`;
-    const fitCls = e.fit ? `fit-cell-${e.fit}` : '';
-    return `<td class="fit-edu-cell ${fitCls}">
-      <div class="fit-edu-univ">${e.univ}</div>
+  // 단일 학위 셀 컨텐츠
+  const renderEduContent = (e, isStacked)=>{
+    return `
+      <div class="fit-edu-univ">${e.univ}${e.univInferred?'<span class="inferred-mark">추정</span>':''}</div>
       <div class="fit-edu-dept">${e.dept||'—'}${e.deptInferred?'<span class="inferred-mark">추정</span>':''}</div>
-      ${e.fit?`<span class="fit-mark fit-${e.fit}">${FIT_LABEL[e.fit]}</span>`:''}
+      ${e.fit?`<span class="fit-mark fit-${e.fit}" ${isStacked?'style="position:static;display:inline-block"':''}>${FIT_LABEL[e.fit]}</span>`:''}
+    `;
+  };
+
+  // 셀 (단일 또는 다중 학위)
+  const renderCell = (entries)=>{
+    if(!entries || entries.length===0) return `<td class="empty-cell">—</td>`;
+    if(entries.length===1){
+      const e = entries[0];
+      const fitCls = e.fit ? `fit-cell-${e.fit}` : '';
+      return `<td class="fit-edu-cell ${fitCls}">${renderEduContent(e, false)}</td>`;
+    }
+    // 여러 학위 (예: 이한표 두 개의 석사)
+    return `<td class="fit-edu-cell" style="padding:0">
+      ${entries.map((e,i)=>{
+        const fitCls = e.fit ? `fit-cell-${e.fit}` : '';
+        return `<div class="${fitCls}" style="padding:12px 14px;${i>0?'border-top:1px dashed var(--line)':''};position:relative">
+          <div style="font-size:9px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-bottom:4px">${e.deg}</div>
+          ${renderEduContent(e, true)}
+        </div>`;
+      }).join('')}
     </td>`;
   };
 
   tbody.innerHTML = candidates.map(c=>{
     const fieldColor = FIELDS[c.field].color;
-    const phd = c.edu.find(e=>e.deg==='Ph.D.');
-    const ms = c.edu.find(e=>e.deg==='M.S.');
-    const bs = c.edu.find(e=>e.deg==='학사');
+    const phd = c.edu.filter(e=>e.deg.startsWith('Ph.D.'));
+    const ms = c.edu.filter(e=>e.deg.startsWith('M.S.'));
+    const bs = c.edu.filter(e=>e.deg==='학사');
 
     return `
     <tr>
@@ -3034,12 +3480,69 @@ function renderEduFitTable(){
   `;
 }
 
+// ============ 학력·현재 소속 요약 표 ============
+function renderSimpleEduTable(){
+  const tbody = document.getElementById('simpleEduTableBody');
+  if(!tbody) return;
+
+  tbody.innerHTML = candidates.map(c=>{
+    const fieldColor = FIELDS[c.field].color;
+    const phd = c.edu.find(e=>e.deg.startsWith('Ph.D.'));
+    const ms = c.edu.find(e=>e.deg.startsWith('M.S.'));
+    const bsList = c.edu.filter(e=>e.deg==='학사');
+
+    const integratedTag = (deg)=>deg.includes('통합')?`<span class="se-integrated">석박 통합</span>`:'';
+
+    const renderOne = (e)=>{
+      if(!e) return '<span class="se-empty">—</span>';
+      return `<div class="se-school-info">
+        <div class="se-school-name">${e.univ}</div>
+        ${e.dept?`<div class="se-dept-name">${e.dept}</div>`:''}
+        ${integratedTag(e.deg)}
+      </div>`;
+    };
+
+    const bsContent = bsList.length===0 ? '<span class="se-empty">—</span>' :
+      bsList.map((e,i)=>`
+        <div class="se-school-info ${i>0?'dual':''}">
+          <div class="se-school-name">${e.univ}</div>
+          ${e.dept?`<div class="se-dept-name">${e.dept}</div>`:''}
+        </div>
+      `).join('');
+
+    const cr = c.currentRole || {};
+    const isInsider = cr.insider;
+
+    return `
+      <tr class="${isInsider?'insider-row':''}">
+        <td class="se-name-cell">
+          <div class="se-name-row">
+            <span class="se-name-dot" style="background:${fieldColor}"></span>
+            ${c.name}
+          </div>
+          <div class="se-name-id">${c.id}</div>
+        </td>
+        <td>${bsContent}</td>
+        <td>${renderOne(ms)}</td>
+        <td>${renderOne(phd)}</td>
+        <td>
+          <div class="se-school-name">${cr.institution||'—'}</div>
+          ${cr.position?`<div class="se-dept-name">${cr.position}</div>`:''}
+          ${cr.type?`<span class="se-position-pill ${cr.type==='정규직'?'permanent':'contract'}">${cr.type}</span>`:''}
+          ${cr.note?`<span class="se-insider-warning">${cr.note}</span>`:''}
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
 // ============ 초기화 ============
 renderFieldToggles();
 updateFieldTrigger();
 renderList();
 renderCharts();
 renderEduFitTable();
+renderSimpleEduTable();
 setupQuantAnalysis();
 
 // 초기 정렬 화살표
