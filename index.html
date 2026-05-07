@@ -1784,6 +1784,64 @@ body{
   border:1px solid var(--line);
   padding:24px 26px;
 }
+
+/* 접기/펼치기 헤더 */
+.pub-section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.pub-section-header > div{flex:1;min-width:240px}
+.pub-toggle-btn{
+  background:var(--ink);
+  color:var(--paper);
+  border:none;
+  padding:10px 18px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.1em;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-transform:uppercase;
+  transition:background 0.15s, transform 0.1s;
+  flex-shrink:0;
+  margin-top:4px;
+}
+.pub-toggle-btn:hover{background:var(--accent-deep)}
+.pub-toggle-btn:active{transform:scale(0.98)}
+.pub-toggle-btn .pub-caret{
+  transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-size:9px;
+  display:inline-block;
+}
+.pub-toggle-btn.open .pub-caret{
+  transform:rotate(180deg);
+}
+.pub-toggle-btn .count-badge{
+  background:rgba(255,255,255,0.18);
+  padding:1px 6px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.04em;
+}
+
+.pub-collapsible{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1), margin-top 0.3s, opacity 0.3s;
+  opacity:0;
+  margin-top:0;
+}
+.pub-collapsible.open{
+  max-height:8000px;
+  opacity:1;
+  margin-top:18px;
+}
 .pub-table-controls{
   display:flex;
   gap:10px;
@@ -2297,50 +2355,61 @@ body{
     </div>
   </div>
 
-  <!-- 저자별 논문 리스트 표 -->
+  <!-- 저자별 논문 리스트 표 (접기/펼치기) -->
   <div class="pub-table-section">
-    <h3 class="comp-title" style="font-size:20px;margin-bottom:4px">저자별 <em>논문 작성 리스트</em></h3>
-    <p class="comp-sub" style="margin-bottom:14px">전체 연구물 통합 리스트 — 컬럼 헤더 클릭으로 정렬 · 양산형 OA 행은 적색 배경</p>
-
-    <div class="pub-table-controls">
-      <select id="pubFilterAuthor"><option value="">전체 저자</option></select>
-      <select id="pubFilterTier">
-        <option value="">전체 등급</option>
-        <option value="Top">★ TOP</option>
-        <option value="Q1">SCI Q1</option>
-        <option value="Q2">SCI Q2</option>
-        <option value="Q3">SCI Q3+</option>
-        <option value="Scopus">Scopus·KCI</option>
-      </select>
-      <select id="pubFilterOA">
-        <option value="">전체 OA 유형</option>
-        <option value="V">⚠ 양산형 OA만</option>
-        <option value="P">Premium OA만</option>
-        <option value="S">Standard OA만</option>
-        <option value="none">구독제만</option>
-      </select>
-      <select id="pubFilterFA">
-        <option value="">1저자/공저자 모두</option>
-        <option value="1">1저자만</option>
-        <option value="0">공저자만</option>
-      </select>
-      <span class="pub-count" id="pubCount"></span>
+    <div class="pub-section-header">
+      <div>
+        <h3 class="comp-title" style="font-size:20px;margin-bottom:4px">저자별 <em>논문 작성 리스트</em></h3>
+        <p class="comp-sub" style="margin-bottom:0">전체 연구물 통합 리스트 — 컬럼 헤더 클릭으로 정렬 · 양산형 OA 행은 적색 배경</p>
+      </div>
+      <button class="pub-toggle-btn" id="pubToggleBtn" type="button" aria-expanded="false">
+        <span class="count-badge">108편</span>
+        <span class="pub-toggle-text">펼치기</span>
+        <span class="pub-caret">▼</span>
+      </button>
     </div>
 
-    <div class="pub-table-wrapper">
-      <table class="pub-table" id="pubTable">
-        <thead>
-          <tr>
-            <th data-key="author">저자 <span class="sort-ind">⇅</span></th>
-            <th data-key="j">저널 <span class="sort-ind">⇅</span></th>
-            <th data-key="y">연도 <span class="sort-ind">⇅</span></th>
-            <th data-key="t" style="text-align:center">등급 <span class="sort-ind">⇅</span></th>
-            <th data-key="oa" style="text-align:center">OA 유형 <span class="sort-ind">⇅</span></th>
-            <th data-key="fa" style="text-align:center">1저자 <span class="sort-ind">⇅</span></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <div class="pub-collapsible" id="pubCollapsible">
+      <div class="pub-table-controls">
+        <select id="pubFilterAuthor"><option value="">전체 저자</option></select>
+        <select id="pubFilterTier">
+          <option value="">전체 등급</option>
+          <option value="Top">★ TOP</option>
+          <option value="Q1">SCI Q1</option>
+          <option value="Q2">SCI Q2</option>
+          <option value="Q3">SCI Q3+</option>
+          <option value="Scopus">Scopus·KCI</option>
+        </select>
+        <select id="pubFilterOA">
+          <option value="">전체 OA 유형</option>
+          <option value="V">⚠ 양산형 OA만</option>
+          <option value="P">Premium OA만</option>
+          <option value="S">Standard OA만</option>
+          <option value="none">구독제만</option>
+        </select>
+        <select id="pubFilterFA">
+          <option value="">1저자/공저자 모두</option>
+          <option value="1">1저자만</option>
+          <option value="0">공저자만</option>
+        </select>
+        <span class="pub-count" id="pubCount"></span>
+      </div>
+
+      <div class="pub-table-wrapper">
+        <table class="pub-table" id="pubTable">
+          <thead>
+            <tr>
+              <th data-key="author">저자 <span class="sort-ind">⇅</span></th>
+              <th data-key="j">저널 <span class="sort-ind">⇅</span></th>
+              <th data-key="y">연도 <span class="sort-ind">⇅</span></th>
+              <th data-key="t" style="text-align:center">등급 <span class="sort-ind">⇅</span></th>
+              <th data-key="oa" style="text-align:center">OA 유형 <span class="sort-ind">⇅</span></th>
+              <th data-key="fa" style="text-align:center">1저자 <span class="sort-ind">⇅</span></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -3390,6 +3459,19 @@ function setupQuantAnalysis(){
       renderPubTable();
     });
   });
+
+  // 논문 리스트 접기/펼치기 토글
+  const pubBtn = document.getElementById('pubToggleBtn');
+  const pubColl = document.getElementById('pubCollapsible');
+  if(pubBtn && pubColl){
+    pubBtn.addEventListener('click', ()=>{
+      const willOpen = !pubBtn.classList.contains('open');
+      pubBtn.classList.toggle('open', willOpen);
+      pubColl.classList.toggle('open', willOpen);
+      pubBtn.setAttribute('aria-expanded', willOpen);
+      pubBtn.querySelector('.pub-toggle-text').textContent = willOpen ? '닫기' : '펼치기';
+    });
+  }
 
   renderQuantAnalysis();
   renderPubTable();
